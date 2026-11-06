@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>No-show Risk & Reminders</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#0b1620; --panel:#112230; --line:#1f3a4f; --txt:#e9f1f7; --mut:#8aa3b6; --lime:#C6F24A; --amber:#FFB547; --red:#ff6b6b; --wa:#25D366; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--txt); font-family:Inter, 'Segoe UI', sans-serif; }
+  .wrap { max-width:1880px; margin:0 auto; padding:22px 26px 28px; }
+  header { display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+  .logo { width:42px; height:42px; border-radius:12px; background:linear-gradient(135deg,var(--amber),var(--red)); display:grid; place-items:center; color:#0b1620; font-weight:900; font-size:22px; }
+  h1 { margin:0; font-size:26px; font-weight:900; letter-spacing:-.3px; }
+  .sub { color:var(--mut); font-size:13px; font-weight:600; margin-top:2px; }
+  .badge { margin-left:auto; padding:6px 12px; border-radius:999px; border:1.5px solid var(--amber); color:var(--amber); font-size:12px; font-weight:800; letter-spacing:1px; }
+  .lang { background:var(--panel); border:1.5px solid var(--lime); color:var(--lime); border-radius:10px; padding:8px 12px; font:700 13px Inter, sans-serif; cursor:pointer; }
+  .kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:18px; }
+  .kpi { background:var(--panel); border:1.5px solid var(--line); border-radius:16px; padding:16px 18px; }
+  .kpi .l { color:var(--mut); font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:.6px; }
+  .kpi .v { font-size:38px; font-weight:900; margin-top:6px; letter-spacing:-1px; }
+  .kpi .d { font-size:13px; color:var(--mut); margin-top:4px; font-weight:600; }
+  .red { color:var(--red); } .amber { color:var(--amber); } .lime { color:var(--lime); } .wa { color:var(--wa); }
+  .main { display:grid; grid-template-columns:1.55fr 1fr; gap:14px; margin-top:14px; }
+  .card { background:var(--panel); border:1.5px solid var(--line); border-radius:16px; padding:14px 16px; }
+  .card h3 { margin:0 0 2px; font-size:16px; font-weight:800; }
+  .card .h { color:var(--mut); font-size:12.5px; font-weight:600; margin-bottom:10px; }
+  .tbl { max-height:600px; overflow:auto; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  th { position:sticky; top:0; background:var(--panel); text-align:left; color:var(--mut); font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:.5px; padding:8px 8px; border-bottom:1.5px solid var(--line); }
+  td { padding:8px 8px; border-bottom:1px solid #173042; vertical-align:middle; }
+  tr:hover td { background:#14293a; } tbody tr { cursor:pointer; } tr.sel td { background:rgba(198,242,74,.10); }
+  .chips { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin:0 0 8px; } .chip2 { background:rgba(198,242,74,.12); border:1.5px solid var(--lime); color:var(--lime); border-radius:999px; padding:4px 11px; font-size:12.5px; font-weight:700; cursor:pointer; } .hint { color:var(--mut); font-size:12.5px; font-weight:600; } .lvl { cursor:pointer; } #cEsp { cursor:pointer; }
+  .bar { width:110px; height:9px; border-radius:6px; background:#1b3446; overflow:hidden; display:inline-block; vertical-align:middle; margin-right:8px; }
+  .bar i { display:block; height:100%; border-radius:6px; }
+  .chip { display:inline-block; padding:3px 9px; border-radius:999px; font-size:11.5px; font-weight:800; }
+  .c-Alto { background:rgba(255,107,107,.16); color:var(--red); border:1px solid rgba(255,107,107,.5); }
+  .c-Medio { background:rgba(255,181,71,.14); color:var(--amber); border:1px solid rgba(255,181,71,.45); }
+  .c-Bajo { background:rgba(198,242,74,.12); color:var(--lime); border:1px solid rgba(198,242,74,.4); }
+  .why { color:var(--mut); font-size:12px; }
+  .act { font-weight:700; font-size:12.5px; white-space:nowrap; }
+  .flow { display:flex; flex-direction:column; gap:8px; }
+  .node { display:flex; align-items:center; gap:12px; background:#0f1f2b; border:1.5px solid var(--line); border-radius:12px; padding:10px 12px; position:relative; }
+  .node .ic { width:34px; height:34px; border-radius:9px; display:grid; place-items:center; font-weight:900; font-size:15px; color:#0b1620; flex:none; }
+  .node b { font-size:14px; } .node span { display:block; color:var(--mut); font-size:12px; font-weight:600; }
+  .node .ct { margin-left:auto; font-weight:900; font-size:16px; }
+  .arrow { text-align:center; color:var(--line); font-size:14px; line-height:6px; }
+  .wa-box { margin-top:12px; background:#0b141a; border-radius:14px; padding:12px; border:1.5px solid #1e3a2b; }
+  .wa-head { display:flex; align-items:center; gap:8px; font-size:13px; font-weight:800; color:#d1d7db; margin-bottom:8px; }
+  .wa-dot { width:26px; height:26px; border-radius:50%; background:var(--wa); display:grid; place-items:center; color:#0b141a; font-size:13px; font-weight:900; }
+  .bubble { background:#005c4b; color:#e9edef; border-radius:10px 10px 2px 10px; padding:9px 11px; font-size:13px; line-height:1.4; max-width:94%; margin-left:auto; }
+  .btns { display:flex; gap:6px; margin-top:6px; justify-content:flex-end; }
+  .btns span { background:#1f2c33; color:#53bdeb; font-size:12px; font-weight:700; padding:6px 10px; border-radius:8px; }
+  .bottom { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:14px; }
+  .chart { width:100%; height:300px; }
+  .sim { display:flex; flex-direction:column; justify-content:center; gap:10px; height:300px; }
+  .sim input { width:100%; accent-color:var(--lime); }
+  .sim .big { font-size:44px; font-weight:900; color:var(--lime); letter-spacing:-1px; }
+  .sim .row { display:flex; justify-content:space-between; color:var(--mut); font-weight:600; font-size:13px; }
+  footer { margin-top:12px; color:var(--mut); font-size:12px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; }
+  @media (max-width:1100px) { .kpis { grid-template-columns:repeat(2,1fr); } .main, .bottom { grid-template-columns:1fr; } }
+  .tabs { display:flex; gap:6px; margin-left:18px; } .tabs a { text-decoration:none; padding:8px 14px; border-radius:10px; font:800 13.5px Inter, sans-serif; color:var(--mut); border:1.5px solid var(--line); background:var(--panel); } .tabs a.on { color:#0b1620; background:var(--lime); border-color:var(--lime); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">!</div>
+    <div><h1 data-i18n="title"></h1><div class="sub" data-i18n="subtitle"></div></div>
+    <nav class="tabs"><a href="dashboard-agenda.html" class="" id="tab1">1 · Inasistencia</a><a href="dashboard-riesgo.html" class="on" id="tab2">2 · Riesgo y recordatorios</a></nav>
+    <div class="badge" data-i18n="badge"></div>
+    <button class="lang" id="lang">ES / EN</button>
+  </header>
+  <div class="kpis">
+    <div class="kpi"><div class="l" data-i18n="k1"></div><div class="v" id="k1"></div><div class="d" id="k1d"></div></div>
+    <div class="kpi"><div class="l" data-i18n="k2"></div><div class="v red" id="k2"></div><div class="d" id="k2d"></div></div>
+    <div class="kpi"><div class="l" data-i18n="k3"></div><div class="v amber" id="k3"></div><div class="d" data-i18n="k3d"></div></div>
+    <div class="kpi"><div class="l" data-i18n="k4"></div><div class="v wa" id="k4"></div><div class="d" data-i18n="k4d"></div></div>
+  </div>
+  <div class="main">
+    <div class="card"><h3 data-i18n="t1"></h3><div class="h" data-i18n="t1h"></div>
+      <div class="chips" id="chips"></div><div class="tbl"><table><thead><tr><th data-i18n="th1"></th><th data-i18n="th2"></th><th data-i18n="th3"></th><th data-i18n="th4"></th><th data-i18n="th5"></th><th data-i18n="th6"></th></tr></thead><tbody id="rows"></tbody></table></div>
+    </div>
+    <div class="card"><h3 data-i18n="t2"></h3><div class="h" data-i18n="t2h"></div>
+      <div class="flow" id="flow"></div>
+      <div class="wa-box"><div class="wa-head"><div class="wa-dot">✓</div><span data-i18n="waName"></span></div>
+        <div class="bubble" id="waMsg"></div><div class="btns"><span data-i18n="b1"></span><span data-i18n="b2"></span></div></div>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="card"><h3 data-i18n="t3"></h3><div class="h" data-i18n="t3h"></div><div class="chart" id="cEsp"></div></div>
+    <div class="card"><h3 data-i18n="t4"></h3><div class="h" data-i18n="t4h"></div>
+      <div class="sim">
+        <div class="row"><span data-i18n="s1"></span><b id="sv" class="lime"></b></div>
+        <input type="range" id="slider" min="0" max="100" value="80">
+        <div class="big" id="rec"></div>
+        <div class="row"><span id="recD"></span><span data-i18n="s3"></span></div>
+      </div>
+    </div>
+  </div>
+  <footer><span data-i18n="foot"></span><span>ECharts · n8n workflow design</span></footer>
+</div>
+<script>/*ECHARTS*/</script>
+<script>
+const P = /*DATA*/;
+const M = P.manana, H = JSON.parse(P.hist);
+const T = {
+  es: { title:'Riesgo de inasistencia y recordatorios', subtitle:'Agenda de mañana · Lunes · Clínica Ejemplo', badge:'DATOS DE EJEMPLO',
+    k1:'Citas de mañana', k2:'Riesgo alto', k3:'Ingresos en riesgo', k3d:'COP · valor × probabilidad de inasistencia', k4:'Recordatorios a enviar', k4d:'riesgo alto y medio · workflow propuesto',
+    d1:(a)=>`${a} profesionales · 4 sedes`, d2:(p)=>`${p}% de la agenda`,
+    t1:'Agenda de mañana, ordenada por riesgo', t1h:'Cada cita recibe un puntaje con las reglas aprendidas del historial (18 meses, 30.000 citas)',
+    th1:'Hora', th2:'Especialidad · profesional', th3:'Paciente', th4:'Riesgo', th5:'Por qué', th6:'Acción',
+    t2:'Workflow propuesto en n8n · cada día 6 p. m.', t2h:'Diseño de cómo se automatizarían los recordatorios (no conectado: no envía mensajes)',
+    f:[['⏰','Cada día 6:00 p. m.','Disparador programado'],['🗂','Lee la agenda de mañana','Supabase / sistema de citas'],['🧮','Calcula el riesgo','reglas del historial'],['💬','WhatsApp a riesgo alto y medio','plantilla aprobada por Meta'],['📞','Llamada a quien no confirma','tarea para recepción'],['📊','Registra el resultado','alimenta este tablero']],
+    waName:'Clínica Ejemplo · mensaje de ejemplo', wa:(e,h)=>`Hola 👋 Te recordamos tu cita de <b>${e}</b> mañana a las <b>${h}</b> en Clínica Ejemplo. ¿Nos confirmas tu asistencia?`, b1:'✅ Confirmo', b2:'📅 Reprogramar',
+    t3:'Riesgo por especialidad (mañana)', t3h:'Número de citas por nivel de riesgo',
+    t4:'Simulador: ¿cuánto se recupera al mes?', t4h:'Usa el efecto observado en el historial: con recordatorio la inasistencia baja de 25% a 15%',
+    s1:'Pacientes de riesgo alto y medio que reciben recordatorio', s3:'estimación, no resultado medido', recD:(n)=>`≈ ${n} citas recuperadas al mes`,
+    lv:{ Alto:'Alto', Medio:'Medio', Bajo:'Bajo' }, act:{ Alto:'💬 WhatsApp + 📞', Medio:'💬 WhatsApp', Bajo:'—' },
+    why:{ espera:(d)=>`espera ${d} días`, previas:(n)=>`${n} inasistencia${n>1?'s':''} previa${n>1?'s':''}`, temprano:'7 a. m.', joven:'18–30 años', lunes:'lunes', subs:'subsidiado' },
+    foot:'Datos ficticios. El puntaje usa reglas simples del historial de ejemplo, no un modelo clínico. El workflow y el mensaje son un diseño propuesto.' },
+  en: { title:'No-show Risk & Automated Reminders', subtitle:"Tomorrow's schedule · Monday · Sample Clinic", badge:'SAMPLE DATA',
+    k1:"Tomorrow's appointments", k2:'High risk', k3:'Revenue at risk', k3d:'COP · fee × no-show probability', k4:'Reminders to send', k4d:'high & medium risk · proposed workflow',
+    d1:(a)=>`${a} providers · 4 sites`, d2:(p)=>`${p}% of the schedule`,
+    t1:"Tomorrow's schedule, sorted by risk", t1h:'Each appointment gets a score from rules learned on the history (18 months, 30,000 visits)',
+    th1:'Time', th2:'Specialty · provider', th3:'Patient', th4:'Risk', th5:'Why', th6:'Action',
+    t2:'Proposed n8n workflow · every day at 6 PM', t2h:'Design of how reminders would be automated (not connected: sends no messages)',
+    f:[['⏰','Every day 6:00 PM','Schedule trigger'],['🗂',"Reads tomorrow's schedule",'Supabase / booking system'],['🧮','Scores the risk','rules from the history'],['💬','WhatsApp to high & medium risk','Meta-approved template'],['📞','Call if no confirmation','task for the front desk'],['📊','Logs the outcome','feeds this dashboard']],
+    waName:'Sample Clinic · sample message', wa:(e,h)=>`Hi 👋 A reminder of your <b>${e}</b> appointment tomorrow at <b>${h}</b> at Sample Clinic. Can you confirm you'll attend?`, b1:'✅ Confirm', b2:'📅 Reschedule',
+    t3:'Risk by specialty (tomorrow)', t3h:'Appointments by risk level',
+    t4:'Simulator: how much is recovered per month?', t4h:'Uses the effect seen in the history: with a reminder, no-shows drop from 25% to 15%',
+    s1:'High & medium-risk patients who get a reminder', s3:'estimate, not a measured result', recD:(n)=>`≈ ${n} appointments recovered per month`,
+    lv:{ Alto:'High', Medio:'Medium', Bajo:'Low' }, act:{ Alto:'💬 WhatsApp + 📞', Medio:'💬 WhatsApp', Bajo:'—' },
+    why:{ espera:(d)=>`${d}-day wait`, previas:(n)=>`${n} prior no-show${n>1?'s':''}`, temprano:'7 AM', joven:'age 18–30', lunes:'Monday', subs:'subsidized' },
+    foot:'Synthetic data. The score uses simple rules from the sample history, not a clinical model. The workflow and message are a proposed design.' },
+};
+const ESP_EN = {'Medicina general':'General medicine','Odontología':'Dentistry','Pediatría':'Pediatrics','Ginecología':'Gynecology','Medicina interna':'Internal medicine','Psicología':'Psychology','Dermatología':'Dermatology','Nutrición':'Nutrition','Cardiología':'Cardiology','Fisioterapia':'Physiotherapy'};
+let L = new URLSearchParams(location.search).get('lang') === 'en' ? 'en' : 'es';
+const t = (k) => T[L][k];
+const tr = (s) => L === 'en' ? (ESP_EN[s] || s) : s;
+const fmt = (x) => x.toLocaleString(L === 'es' ? 'es-CO' : 'en-US');
+const C = { lime:'#C6F24A', amber:'#FFB547', red:'#ff6b6b', mut:'#8aa3b6', line:'#1f3a4f', txt:'#e9f1f7' };
+const col = { Alto:C.red, Medio:C.amber, Bajo:C.lime };
+
+// Monthly baseline from the history: no-shows per month and average fee.
+const NSi = H.dicts.estado.indexOf('No asistió');
+let nsCount = 0, nsValue = 0; for (let i = 0; i < H.n; i++) if (H.cols.estado[i] === NSi) { nsCount++; nsValue += H.cols.valor[i]; }
+const months = H.dicts.mes.length, nsPerMonth = nsCount / months, avgFee = nsValue / nsCount;
+
+function why(m) {
+  const w = [], W = T[L].why;
+  if (m.inasistencias_previas > 0) w.push(W.previas(m.inasistencias_previas));
+  if (m.dias_espera >= 15) w.push(W.espera(m.dias_espera));
+  if (m.hora === 7) w.push(W.temprano);
+  if (m.edad >= 18 && m.edad <= 30) w.push(W.joven);
+  if (m.regimen === 'Subsidiado') w.push(W.subs);
+  return w.slice(0, 3).join(' · ') || W.lunes;
+}
+const F = { esp:null, nivel:null }; let selId = null;
+let chart;
+function chipsR() {
+  const c = [];
+  if (F.esp) c.push(['esp', tr(F.esp)]);
+  if (F.nivel) c.push(['nivel', T[L].lv[F.nivel]]);
+  document.getElementById('chips').innerHTML = c.length ? c.map(([k,v]) => `<span class="chip2" data-k="${k}">${v} ✕</span>`).join('') : `<span class="hint">👆 ${L === 'es' ? 'Clic en una especialidad o nivel del gráfico de abajo para filtrar; clic en una fila para ver su mensaje' : 'Click a specialty or level in the chart below to filter; click a row to preview its message'}</span>`;
+  document.querySelectorAll('#chips .chip2').forEach((el) => el.onclick = () => { F[el.dataset.k] = null; render(); });
+}
+function render() {
+  document.querySelectorAll('[data-i18n]').forEach((el) => { el.textContent = t(el.dataset.i18n); });
+  document.getElementById('tab1').textContent = L === 'es' ? '1 · Inasistencia' : '1 · No-shows'; document.getElementById('tab2').textContent = L === 'es' ? '2 · Riesgo y recordatorios' : '2 · Risk & reminders';
+  document.getElementById('tab1').href = 'dashboard-agenda.html' + (L === 'en' ? '?lang=en' : ''); document.getElementById('tab2').href = 'dashboard-riesgo.html' + (L === 'en' ? '?lang=en' : '');
+  const SUB = M.filter((m) => (!F.esp || m.especialidad === F.esp) && (!F.nivel || m.nivel === F.nivel));
+  const hi = SUB.filter((m) => m.nivel === 'Alto'), med = SUB.filter((m) => m.nivel === 'Medio');
+  const atRisk = SUB.reduce((a, m) => a + m.valor * m.riesgo, 0);
+  document.getElementById('k1').textContent = SUB.length;
+  document.getElementById('k1d').textContent = T[L].d1(new Set(SUB.map((m) => m.profesional)).size);
+  document.getElementById('k2').textContent = hi.length;
+  document.getElementById('k2d').textContent = T[L].d2(SUB.length ? Math.round(hi.length / SUB.length * 100) : 0);
+  document.getElementById('k3').textContent = '$' + (atRisk / 1e6).toFixed(1) + ' M';
+  document.getElementById('k4').textContent = hi.length + med.length;
+
+  chipsR();
+  const sorted = [...M].filter((m) => (!F.esp || m.especialidad === F.esp) && (!F.nivel || m.nivel === F.nivel)).sort((a, b) => b.riesgo - a.riesgo);
+  document.getElementById('rows').innerHTML = sorted.map((m) => `<tr data-id="${m.id_cita}" class="${m.id_cita === selId ? 'sel' : ''}"><td><b>${m.hora_txt}</b></td><td>${tr(m.especialidad)}<div class="why">${m.profesional} · ${m.sede}</div></td><td>${(L === "en" ? "Patient " : "Paciente ") + m.paciente.split(" ")[1]}</td>
+    <td><span class="bar"><i style="width:${Math.round(m.riesgo / 0.85 * 100)}%;background:${col[m.nivel]}"></i></span><b>${Math.round(m.riesgo * 100)}%</b> <span class="chip c-${m.nivel}">${T[L].lv[m.nivel]}</span></td>
+    <td class="why">${why(m)}</td><td class="act">${T[L].act[m.nivel]}</td></tr>`).join('');
+
+  const counts = [SUB.length, SUB.length, SUB.length, hi.length + med.length, hi.length, SUB.length];
+  document.getElementById('flow').innerHTML = T[L].f.map(([ic, b, s], k) => `${k ? '<div class="arrow">▼</div>' : ''}<div class="node"><div class="ic" style="background:${['#C6F24A','#4fd1c5','#FFB547','#25D366','#ff9f7f','#7aa7ff'][k]}">${ic}</div><div><b>${b}</b><span>${s}</span></div><div class="ct">${counts[k]}</div></div>`).join('');
+  const top = M.find((m) => m.id_cita === selId) || sorted[0] || M[0];
+  document.getElementById('waMsg').innerHTML = T[L].wa(tr(top.especialidad).toLowerCase(), top.hora_txt);
+  document.querySelectorAll('#rows tr').forEach((r) => r.onclick = () => { selId = r.dataset.id; render(); });
+
+  const esps = [...new Set(M.map((m) => m.especialidad))];
+  const by = (lv) => esps.map((e) => M.filter((m) => m.especialidad === e && m.nivel === lv).length);
+  chart = chart || echarts.init(document.getElementById('cEsp'));
+  chart.setOption({ grid:{ left:120, right:20, top:28, bottom:20 }, tooltip:{ trigger:'axis', axisPointer:{ type:'shadow' } },
+    legend:{ data:['Alto','Medio','Bajo'].map((l) => T[L].lv[l]), textStyle:{ color:C.mut }, top:0, right:0 },
+    xAxis:{ type:'value', axisLabel:{ color:C.mut }, splitLine:{ lineStyle:{ color:'#173042' } } },
+    yAxis:{ type:'category', data:esps.map(tr), axisLabel:{ color:C.mut }, axisLine:{ lineStyle:{ color:C.line } } },
+    series:['Alto','Medio','Bajo'].map((l) => ({ name:T[L].lv[l], lvl:l, type:'bar', stack:'r', data:by(l).map((v,k) => ({ value:v, esp:esps[k], itemStyle:{ opacity:(!F.esp || F.esp === esps[k]) && (!F.nivel || F.nivel === l) ? 1 : 0.25 } })), itemStyle:{ color:col[l] }, barWidth:'60%' })) }, true);
+  if (!chart._wired) { chart._wired = true; chart.on('click', (p) => { const lvl = ['Alto','Medio','Bajo'][p.seriesIndex]; const same = F.esp === p.data.esp && F.nivel === lvl; F.esp = same ? null : p.data.esp; F.nivel = same ? null : lvl; render(); }); }
+  sim();
+}
+function sim() {
+  const cov = +document.getElementById('slider').value / 100;
+  // Share of no-shows that come from high/medium risk patients, times coverage, times the relative drop seen (25% -> 15%).
+  const shareHM = M.filter((m) => m.nivel !== 'Bajo').reduce((a, m) => a + m.riesgo, 0) / M.reduce((a, m) => a + m.riesgo, 0);
+  const recovered = nsPerMonth * shareHM * cov * 0.4;
+  document.getElementById('sv').textContent = Math.round(cov * 100) + '%';
+  document.getElementById('rec').textContent = '+$' + (recovered * avgFee / 1e6).toFixed(1) + ' M / ' + (L === 'es' ? 'mes' : 'month');
+  document.getElementById('recD').textContent = T[L].recD(fmt(Math.round(recovered)));
+}
+document.getElementById('slider').addEventListener('input', sim);
+const q2 = new URLSearchParams(location.search); if (q2.get('F')) Object.assign(F, JSON.parse(q2.get('F')));
+document.getElementById('lang').addEventListener('click', () => { L = L === 'es' ? 'en' : 'es'; render(); });
+render();
+window.addEventListener('resize', () => chart && chart.resize());
+</script>
+</body>
+</html>

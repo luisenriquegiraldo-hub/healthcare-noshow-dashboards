@@ -1,0 +1,201 @@
+﻿id_cita;fecha_cita;hora;hora_txt;dia;mes;sede;especialidad;profesional;cups;tipo_consulta;canal;recordatorio;dias_espera;edad;sexo;regimen;eps;inasistencias_previas;valor;duracion_min;cie10;diagnostico;estado;riesgo_modelo
+C006600;2025-01-02;7;07:00;Jueves;2025-01;Sede Sur;Medicina general;Dr(a). D. Rincón;890201;Control;WhatsApp;Sí;4;42;M;Contributivo;EPS Valle Salud;0;45000;20;E119;Diabetes mellitus tipo 2;Canceló paciente;0.12
+C018392;2025-01-02;7;07:00;Jueves;2025-01;Sede Centro;Fisioterapia;Dr(a). C. Valencia;931000;Control;Presencial;No;21;49;F;Subsidiado;EPS Andina;1;40000;40;M751;Síndrome del manguito rotador;Asistió;0.42
+C007777;2025-01-02;7;07:20;Jueves;2025-01;Sede Centro;Medicina general;Dr(a). M. Ospina;890201;Control;Teléfono;Sí;0;69;F;Contributivo;EPS Pacífico;0;45000;20;E119;Diabetes mellitus tipo 2;Asistió;0.08
+C012593;2025-01-02;7;07:20;Jueves;2025-01;Sede Centro;Odontología;Dr(a). R. Bermúdez;890203;Control;Presencial;No;17;48;F;Contributivo;EPS Valle Salud;0;60000;30;K021;Caries de la dentina;Asistió;0.28
+C027780;2025-01-02;7;07:20;Jueves;2025-01;Sede Sur;Nutrición;Dr(a). Y. Correa;890206;Control;Presencial;Sí;18;52;F;Contributivo;EPS Pacífico;0;50000;30;Z713;Consejería dietética;Asistió;0.2
+C028721;2025-01-02;7;07:20;Jueves;2025-01;Sede Sur;Medicina general;Dr(a). D. Rincón;890201;Control;WhatsApp;Sí;2;22;M;Contributivo;EPS Pacífico;0;45000;20;Z000;Examen médico general;No asistió;0.14
+C008124;2025-01-02;7;07:40;Jueves;2025-01;Sede Sur;Dermatología;Dr(a). B. Escobar;890242;Control;Teléfono;No;17;48;M;Subsidiado;EPS Pacífico;0;95000;20;L409;Psoriasis;Asistió;0.36
+C010200;2025-01-02;7;07:40;Jueves;2025-01;Sede Norte;Medicina general;Dr(a). L. Mejía;890201;Control;Teléfono;No;0;55;F;Subsidiado;EPS Pacífico;0;45000;20;I10X;Hipertensión esencial;Asistió;0.2
+C026572;2025-01-02;7;07:40;Jueves;2025-01;Sede Norte;Fisioterapia;Dr(a). Z. Hoyos;931000;Control;Teléfono;Sí;17;39;M;Contributivo;EPS Pacífico;0;40000;40;M545;Lumbago;Asistió;0.19
+C029095;2025-01-02;7;07:40;Jueves;2025-01;Sede Oeste;Medicina general;Dr(a). J. Cárdenas;890201;Primera vez;Web;No;6;35;M;Prepagada;—;0;45000;20;R51X;Cefalea;Canceló IPS;0.16
+C002964;2025-01-02;8;08:00;Jueves;2025-01;Sede Sur;Medicina general;Dr(a). D. Rincón;890201;Control;Teléfono;No;4;55;M;Contributivo;EPS Valle Salud;0;45000;20;Z000;Examen médico general;Asistió;0.14
+C004896;2025-01-02;8;08:00;Jueves;2025-01;Sede Sur;Dermatología;Dr(a). B. Escobar;890242;Control;WhatsApp;Sí;23;49;M;Subsidiado;EPS Nacional;0;95000;20;L209;Dermatitis atópica;No asistió;0.18
+C001711;2025-01-02;8;08:20;Jueves;2025-01;Sede Sur;Pediatría;Dr(a). F. Castaño;890283;Primera vez;Teléfono;Sí;15;4;M;Subsidiado;EPS Pacífico;0;70000;20;Z001;Control de crecimiento y desarrollo;Asistió;0.11
+C006329;2025-01-02;8;08:20;Jueves;2025-01;Sede Sur;Pediatría;Dr(a). F. Castaño;890283;Control;Presencial;No;13;12;F;Subsidiado;EPS Pacífico;0;70000;20;A09X;Diarrea y gastroenteritis;Asistió;0.13
+C010675;2025-01-02;8;08:20;Jueves;2025-01;Sede Oeste;Medicina general;Dr(a). J. Cárdenas;890201;Control;Web;Sí;1;73;F;Contributivo;EPS Nacional;0;45000;20;E119;Diabetes mellitus tipo 2;Asistió;0.06
+C011777;2025-01-02;8;08:20;Jueves;2025-01;Sede Sur;Psicología;Dr(a). H. Giraldo;890208;Control;Teléfono;No;22;36;M;Subsidiado;EPS Valle Salud;0;65000;40;F329;Episodio depresivo;No asistió;0.38
+C018169;2025-01-02;8;08:20;Jueves;2025-01;Sede Norte;Medicina general;Dr(a). L. Mejía;890201;Primera vez;WhatsApp;Sí;2;45;F;Contributivo;EPS Pacífico;2;45000;20;Z000;Examen médico general;Asistió;0.17
+C025257;2025-01-02;8;08:20;Jueves;2025-01;Sede Centro;Medicina general;Dr(a). M. Ospina;890201;Control;Teléfono;No;1;65;F;Contributivo;EPS Nacional;2;45000;20;J00X;Rinofaringitis aguda;Canceló IPS;0.17
+C026709;2025-01-02;8;08:20;Jueves;2025-01;Sede Sur;Medicina general;Dr(a). C. Valencia;890201;Control;WhatsApp;Sí;11;68;F;Contributivo;EPS Pacífico;1;45000;20;E119;Diabetes mellitus tipo 2;Asistió;0.1
+C026098;2025-01-02;8;08:40;Jueves;2025-01;Sede Norte;Odontología;Dr(a). P. Salazar;890203;Control;Presencial;Sí;13;27;F;Contributivo;EPS Valle Salud;3;60000;30;K051;Gingivitis crónica;Asistió;0.32
+C012892;2025-01-02;9;09:00;Jueves;2025-01;Sede Sur;Pediatría;Dr(a). F. Castaño;890283;Primera vez;Teléfono;No;19;1;M;Contributivo;EPS Andina;0;70000;20;Z001;Control de crecimiento y desarrollo;Asistió;0.17
+C014797;2025-01-02;9;09:00;Jueves;2025-01;Sede Centro;Medicina general;Dr(a). M. Ospina;890201;Primera vez;WhatsApp;Sí;5;67;F;Subsidiado;EPS Andina;0;45000;20;E119;Diabetes mellitus tipo 2;Canceló paciente;0.09
+C026509;2025-01-02;9;09:00;Jueves;2025-01;Sede Sur;Nutrición;Dr(a). Y. Correa;890206;Control;Teléfono;No;23;42;M;Contributivo;EPS Andina;0;50000;30;Z713;Consejería dietética;No asistió;0.31
+C028172;2025-01-02;9;09:00;Jueves;2025-01;Sede Sur;Ginecología;Dr(a). G. Ochoa;890250;Primera vez;Web;No;0;61;F;Subsidiado;EPS Valle Salud;0;85000;20;N939;Hemorragia uterina anormal;Asistió;0.2
+C010700;2025-01-02;9;09:20;Jueves;2025-01;Sede Norte;Pediatría;Dr(a). V. Arango;890283;Control;WhatsApp;No;17;3;M;Contributivo;EPS Valle Salud;0;70000;20;Z001;Control de crecimiento y desarrollo;No asistió;0.14
+C021318;2025-01-02;9;09:20;Jueves;2025-01;Sede Norte;Ginecología;Dr(a). N. Londoño;890250;Control;Presencial;No;13;57;F;Prepagada;—;1;85000;20;Z348;Control de embarazo;Asistió;0.15
+C026973;2025-01-02;9;09:40;Jueves;2025-01;Sede Sur;Psicología;Dr(a). H. Giraldo;890208;Primera vez;Teléfono;Sí;2;72;M;Subsidiado;EPS Nacional;0;65000;40;Z634;Duelo;Asistió;0.15
+C027215;2025-01-02;9;09:40;Jueves;2025-01;Sede Sur;Medicina general;Dr(a). D. Rincón;890201;Primera vez;WhatsApp;Sí;9;47;M;Prepagada;—;1;45000;20;Z000;Examen médico general;Canceló paciente;0.11
+C028004;2025-01-02;9;09:40;Jueves;2025-01;Sede Sur;Ginecología;Dr(a). G. Ochoa;890250;Primera vez;Teléfono;No;11;41;F;Contributivo;EPS Andina;0;85000;20;Z014;Examen ginecológico;Canceló paciente;0.21
+C011546;2025-01-02;10;10:00;Jueves;2025-01;Sede Norte;Medicina general;Dr(a). A. Restrepo;890201;Control;Presencial;No;5;71;F;Subsidiado;EPS Pacífico;0;45000;20;J00X;Rinofaringitis aguda;Asistió;0.1
+C012209;2025-01-02;10;10:20;Jueves;2025-01;Sede Sur;Medicina general;Dr(a). D. Rincón;890201;Control;Teléfono;No;11;54;M;Contributivo;EPS Valle Salud;0;45000;20;I10X;Hipertensión esencial;Canceló paciente;0.16
+C026306;2025-01-02;10;10:20;Jueves;2025-01;Sede Sur;Dermatología;Dr(a). B. Escobar;890242;Primera vez;Teléfono;No;13;40;F;Contributivo;EPS Nacional;1;95000;20;L209;Dermatitis atópica;Asistió;0.35
+C026919;2025-01-02;10;10:20;Jueves;2025-01;Sede Sur;Fisioterapia;Dr(a). A. Restrepo;931000;Control;Presencial;No;20;40;M;Subsidiado;EPS Valle Salud;0;40000;40;M545;Lumbago;Canceló paciente;0.23
+C029200;2025-01-02;10;10:20;Jueves;2025-01;Sede Norte;Medicina general;Dr(a). L. Mejía;890201;Control;Web;Sí;1;40;F;Subsidiado;EPS Valle Salud;0;45000;20;I10X;Hipertensión esencial;Canceló paciente;0.09
+C029461;2025-01-02;10;10:20;Jueves;2025-01;Sede Centro;Odontología;Dr(a). R. Bermúdez;890203;Control;WhatsApp;Sí;8;28;F;Subsidiado;EPS Valle Salud;0;60000;30;Z012;Examen odontológico;No asistió;0.19
+C001080;2025-01-02;10;10:40;Jueves;2025-01;Sede Sur;Psicología;Dr(a). H. Giraldo;890208;Control;Teléfono;No;16;42;F;Contributivo;EPS Andina;0;65000;40;F419;Trastorno de ansiedad;Asistió;0.3
+C007182;2025-01-02;10;10:40;Jueves;2025-01;Sede Centro;Odontología;Dr(a). R. Bermúdez;890203;Control;WhatsApp;Sí;6;53;F;Contributivo;EPS Nacional;0;60000;30;K021;Caries de la dentina;No asistió;0.13
+C008597;2025-01-02;10;10:40;Jueves;2025-01;Sede Norte;Medicina general;Dr(a). L. Mejía;890201;Primera vez;Presencial;Sí;3;34;M;Particular;—;0;45000;20;J00X;Rinofaringitis aguda;Asistió;0.08
+C019321;2025-01-02;10;10:40;Jueves;2025-01;Sede Sur;Medicina general;Dr(a). D. Rincón;890201;Control;Teléfono;No;1;61;F;Subsidiado;EPS Valle Salud;0;45000;20;E119;Diabetes mellitus tipo 2;No asistió;0.15
+C023453;2025-01-02;10;10:40;Jueves;2025-01;Sede Norte;Pediatría;Dr(a). V. Arango;890283;Control;WhatsApp;No;13;11;M;Contributivo;EPS Nacional;0;70000;20;J069;Infección respiratoria aguda;Asistió;0.13
+C003084;2025-01-02;11;11:00;Jueves;2025-01;Sede Norte;Medicina interna;Dr(a). E. Patiño;890266;Primera vez;Teléfono;Sí;4;54;M;Contributivo;EPS Nacional;0;90000;20;I10X;Hipertensión esencial;Asistió;0.09
+C004380;2025-01-02;11;11:20;Jueves;2025-01;Sede Sur;Medicina general;Dr(a). C. Valencia;890201;Primera vez;Web;Sí;15;91;M;Contributivo;EPS Andina;0;45000;20;J00X;Rinofaringitis aguda;Asistió;0.09
+C005333;2025-01-02;11;11:20;Jueves;2025-01;Sede Norte;Medicina interna;Dr(a). E. Patiño;890266;Primera vez;Teléfono;No;20;38;F;Subsidiado;EPS Andina;0;90000;20;E785;Hiperlipidemia;No asistió;0.23
+C022828;2025-01-02;11;11:20;Jueves;2025-01;Sede Sur;Ginecología;Dr(a). G. Ochoa;890250;Control;Teléfono;No;2;20;F;Subsidiado;EPS Nacional;0;85000;20;Z014;Examen ginecológico;Asistió;0.23
+C022840;2025-01-02;11;11:20;Jueves;2025-01;Sede Sur;Medicina general;Dr(a). D. Rincón;890201;Primera vez;Web;No;3;46;F;Contributivo;EPS Valle Salud;0;45000;20;J00X;Rinofaringitis aguda;Asistió;0.16
+C028908;2025-01-02;11;11:20;Jueves;2025-01;Sede Norte;Odontología;Dr(a). P. Salazar;890203;Control;WhatsApp;No;3;38;M;Contributivo;EPS Pacífico;0;60000;30;Z012;Examen odontológico;Asistió;0.19
+C013363;2025-01-02;11;11:40;Jueves;2025-01;Sede Sur;Psicología;Dr(a). H. Giraldo;890208;Control;WhatsApp;Sí;6;27;F;Subsidiado;EPS Pacífico;0;65000;40;F419;Trastorno de ansiedad;No asistió;0.23
+C018664;2025-01-02;11;11:40;Jueves;2025-01;Sede Sur;Odontología;Dr(a). S. Quintero;890203;Primera vez;WhatsApp;Sí;22;34;M;Contributivo;EPS Pacífico;0;60000;30;Z012;Examen odontológico;Asistió;0.19
+C023378;2025-01-02;11;11:40;Jueves;2025-01;Sede Sur;Medicina general;Dr(a). D. Rincón;890201;Control;Presencial;Sí;3;57;F;Subsidiado;EPS Valle Salud;0;45000;20;R51X;Cefalea;Asistió;0.08
+C012725;2025-01-02;14;14:00;Jueves;2025-01;Sede Sur;Odontología;Dr(a). S. Quintero;890203;Control;WhatsApp;Sí;16;40;F;Subsidiado;EPS Valle Salud;0;60000;30;Z012;Examen odontológico;Asistió;0.17
+C025502;2025-01-02;14;14:00;Jueves;2025-01;Sede Sur;Dermatología;Dr(a). B. Escobar;890242;Primera vez;WhatsApp;Sí;23;25;F;Subsidiado;EPS Pacífico;0;95000;20;L209;Dermatitis atópica;Asistió;0.28
+C006155;2025-01-02;14;14:20;Jueves;2025-01;Sede Sur;Pediatría;Dr(a). F. Castaño;890283;Control;Teléfono;No;5;10;M;Subsidiado;EPS Andina;0;70000;20;Z001;Control de crecimiento y desarrollo;Canceló paciente;0.13
+C012026;2025-01-02;14;14:20;Jueves;2025-01;Sede Sur;Odontología;Dr(a). S. Quintero;890203;Primera vez;Web;No;17;33;M;Subsidiado;EPS Valle Salud;0;60000;30;K021;Caries de la dentina;Asistió;0.33
+C013105;2025-01-02;14;14:20;Jueves;2025-01;Sede Norte;Nutrición;Dr(a). O. Marín;890206;Control;Teléfono;No;13;33;F;Particular;—;0;50000;30;E669;Obesidad;Asistió;0.26
+C008590;2025-01-02;14;14:40;Jueves;2025-01;Sede Centro;Fisioterapia;Dr(a). C. Valencia;931000;Primera vez;Presencial;No;14;39;M;Contributivo;EPS Pacífico;0;40000;40;M751;Síndrome del manguito rotador;Asistió;0.21
+C016452;2025-01-02;14;14:40;Jueves;2025-01;Sede Oeste;Medicina general;Dr(a). J. Cárdenas;890201;Control;WhatsApp;Sí;12;49;M;Subsidiado;EPS Valle Salud;1;45000;20;I10X;Hipertensión esencial;Asistió;0.16
+C017456;2025-01-02;14;14:40;Jueves;2025-01;Sede Norte;Medicina general;Dr(a). L. Mejía;890201;Control;Presencial;No;5;28;M;Contributivo;EPS Nacional;0;45000;20;J00X;Rinofaringitis aguda;Asistió;0.16
+C018210;2025-01-02;14;14:40;Jueves;2025-01;Sede Sur;Medicina interna;Dr(a). T. Zuluaga;890266;Primera vez;Presencial;No;0;31;M;Contributivo;EPS Pacífico;1;90000;20;E119;Diabetes mellitus tipo 2;Asistió;0.16
+C019507;2025-01-02;14;14:40;Jueves;2025-01;Sede Centro;Odontología;Dr(a). R. Bermúdez;890203;Control;Teléfono;Sí;18;74;M;Prepagada;—;0;60000;30;Z012;Examen odontológico;Asistió;0.08
+C024010;2025-01-02;14;14:40;Jueves;2025-01;Sede Sur;Medicina general;Dr(a). C. Valencia;890201;Control;Teléfono;No;5;30;F;Subsidiado;EPS Nacional;0;45000;20;R51X;Cefalea;No asistió;0.21
+C028297;2025-01-02;14;14:40;Jueves;2025-01;Sede Sur;Pediatría;Dr(a). F. Castaño;890283;Primera vez;Web;Sí;17;6;M;Contributivo;EPS Valle Salud;1;70000;20;J069;Infección respiratoria aguda;Asistió;0.14
+C021857;2025-01-02;15;15:00;Jueves;2025-01;Sede Norte;Medicina general;Dr(a). A. Restrepo;890201;Control;Teléfono;No;11;42;F;Prepagada;—;0;45000;20;I10X;Hipertensión esencial;Asistió;0.11
+C019399;2025-01-02;15;15:20;Jueves;2025-01;Sede Sur;Dermatología;Dr(a). B. Escobar;890242;Primera vez;Teléfono;No;17;54;M;Prepagada;—;0;95000;20;L209;Dermatitis atópica;Asistió;0.19
+C016110;2025-01-02;15;15:40;Jueves;2025-01;Sede Centro;Medicina general;Dr(a). M. Ospina;890201;Primera vez;Presencial;Sí;12;56;M;Contributivo;EPS Valle Salud;0;45000;20;I10X;Hipertensión esencial;Asistió;0.1
+C013739;2025-01-02;16;16:00;Jueves;2025-01;Sede Norte;Dermatología;Dr(a). K. Duque;890242;Primera vez;Presencial;No;21;43;M;Contributivo;EPS Pacífico;2;95000;20;L409;Psoriasis;No asistió;0.42
+C017513;2025-01-02;16;16:00;Jueves;2025-01;Sede Norte;Odontología;Dr(a). P. Salazar;890203;Primera vez;Presencial;Sí;0;46;M;Contributivo;EPS Andina;0;60000;30;K021;Caries de la dentina;Asistió;0.11
+C021010;2025-01-02;16;16:00;Jueves;2025-01;Sede Sur;Medicina interna;Dr(a). T. Zuluaga;890266;Primera vez;Teléfono;No;4;46;M;Contributivo;EPS Pacífico;0;90000;20;E119;Diabetes mellitus tipo 2;Asistió;0.15
+C015002;2025-01-02;16;16:20;Jueves;2025-01;Sede Sur;Ginecología;Dr(a). G. Ochoa;890250;Primera vez;WhatsApp;Sí;10;30;F;Contributivo;EPS Valle Salud;0;85000;20;Z014;Examen ginecológico;Canceló paciente;0.17
+C015246;2025-01-02;16;16:20;Jueves;2025-01;Sede Oeste;Medicina general;Dr(a). J. Cárdenas;890201;Primera vez;WhatsApp;Sí;2;70;F;Contributivo;EPS Valle Salud;1;45000;20;I10X;Hipertensión esencial;Asistió;0.1
+C023026;2025-01-02;16;16:20;Jueves;2025-01;Sede Sur;Odontología;Dr(a). S. Quintero;890203;Control;WhatsApp;Sí;8;68;F;Contributivo;EPS Nacional;1;60000;30;K021;Caries de la dentina;Asistió;0.13
+C001331;2025-01-02;16;16:40;Jueves;2025-01;Sede Norte;Pediatría;Dr(a). V. Arango;890283;Primera vez;Teléfono;No;11;9;F;Contributivo;EPS Andina;0;70000;20;Z001;Control de crecimiento y desarrollo;Asistió;0.15
+C005211;2025-01-02;16;16:40;Jueves;2025-01;Sede Norte;Medicina general;Dr(a). A. Restrepo;890201;Control;WhatsApp;Sí;9;32;F;Prepagada;—;0;45000;20;R51X;Cefalea;Asistió;0.07
+C014008;2025-01-02;16;16:40;Jueves;2025-01;Sede Sur;Cardiología;Dr(a). X. Vélez;890228;Control;Teléfono;Sí;19;59;F;Subsidiado;EPS Valle Salud;0;110000;20;I489;Fibrilación auricular;Asistió;0.09
+C018518;2025-01-02;16;16:40;Jueves;2025-01;Sede Norte;Medicina general;Dr(a). A. Restrepo;890201;Primera vez;Presencial;No;0;37;F;Contributivo;EPS Nacional;0;45000;20;I10X;Hipertensión esencial;Asistió;0.13
+C004682;2025-01-02;17;17:00;Jueves;2025-01;Sede Norte;Pediatría;Dr(a). V. Arango;890283;Control;Presencial;Sí;12;8;F;Contributivo;EPS Nacional;0;70000;20;Z001;Control de crecimiento y desarrollo;Asistió;0.08
+C025401;2025-01-02;17;17:00;Jueves;2025-01;Sede Norte;Pediatría;Dr(a). V. Arango;890283;Control;Teléfono;No;12;8;F;Prepagada;—;1;70000;20;A09X;Diarrea y gastroenteritis;Asistió;0.15
+C010801;2025-01-02;17;17:40;Jueves;2025-01;Sede Centro;Odontología;Dr(a). R. Bermúdez;890203;Primera vez;Teléfono;No;16;42;F;Contributivo;EPS Pacífico;1;60000;30;K051;Gingivitis crónica;No asistió;0.46
+C022252;2025-01-02;17;17:40;Jueves;2025-01;Sede Centro;Odontología;Dr(a). R. Bermúdez;890203;Control;Web;No;11;60;M;Subsidiado;EPS Pacífico;0;60000;30;K021;Caries de la dentina;Asistió;0.31
+C018967;2025-01-03;7;07:00;Viernes;2025-01;Sede Centro;Medicina general;Dr(a). M. Ospina;890201;Primera vez;Presencial;Sí;12;47;M;Subsidiado;EPS Pacífico;1;45000;20;E119;Diabetes mellitus tipo 2;Asistió;0.21
+C023295;2025-01-03;7;07:00;Viernes;2025-01;Sede Sur;Medicina general;Dr(a). C. Valencia;890201;Control;Teléfono;Sí;7;50;M;Contributivo;EPS Andina;1;45000;20;I10X;Hipertensión esencial;Asistió;0.17
+C025017;2025-01-03;7;07:00;Viernes;2025-01;Sede Norte;Psicología;Dr(a). I. Montoya;890208;Primera vez;WhatsApp;Sí;17;44;F;Contributivo;EPS Nacional;1;65000;40;Z634;Duelo;Canceló paciente;0.4
+C025921;2025-01-03;7;07:00;Viernes;2025-01;Sede Centro;Medicina general;Dr(a). M. Ospina;890201;Primera vez;Presencial;Sí;0;47;F;Contributivo;EPS Andina;0;45000;20;R51X;Cefalea;Asistió;0.11
+C027680;2025-01-03;7;07:00;Viernes;2025-01;Sede Norte;Medicina interna;Dr(a). E. Patiño;890266;Control;WhatsApp;Sí;11;71;F;Subsidiado;EPS Nacional;0;90000;20;E785;Hiperlipidemia;Canceló paciente;0.11
+C014073;2025-01-03;7;07:20;Viernes;2025-01;Sede Norte;Dermatología;Dr(a). K. Duque;890242;Control;Presencial;Sí;18;33;M;Contributivo;EPS Pacífico;1;95000;20;L209;Dermatitis atópica;Canceló paciente;0.23
+C017326;2025-01-03;7;07:20;Viernes;2025-01;Sede Sur;Medicina general;Dr(a). D. Rincón;890201;Primera vez;Teléfono;No;0;35;F;Subsidiado;EPS Pacífico;0;45000;20;Z000;Examen médico general;Asistió;0.23
+C023384;2025-01-03;7;07:20;Viernes;2025-01;Sede Norte;Medicina general;Dr(a). A. Restrepo;890201;Control;Teléfono;No;4;33;M;Subsidiado;EPS Andina;0;45000;20;E119;Diabetes mellitus tipo 2;Canceló paciente;0.22
+C025055;2025-01-03;7;07:20;Viernes;2025-01;Sede Norte;Medicina general;Dr(a). L. Mejía;890201;Control;WhatsApp;Sí;10;70;F;Contributivo;EPS Pacífico;0;45000;20;R51X;Cefalea;Asistió;0.1
+C007954;2025-01-03;7;07:40;Viernes;2025-01;Sede Sur;Fisioterapia;Dr(a). A. Restrepo;931000;Control;Teléfono;No;17;43;F;Contributivo;EPS Andina;3;40000;40;M751;Síndrome del manguito rotador;Asistió;0.61
+C012529;2025-01-03;7;07:40;Viernes;2025-01;Sede Norte;Pediatría;Dr(a). V. Arango;890283;Control;Presencial;No;11;5;M;Contributivo;EPS Andina;0;70000;20;J069;Infección respiratoria aguda;Asistió;0.15
+C006414;2025-01-03;8;08:00;Viernes;2025-01;Sede Sur;Dermatología;Dr(a). B. Escobar;890242;Control;WhatsApp;Sí;10;75;F;Contributivo;EPS Valle Salud;0;95000;20;L409;Psoriasis;No asistió;0.1
+C019897;2025-01-03;8;08:00;Viernes;2025-01;Sede Norte;Pediatría;Dr(a). V. Arango;890283;Control;Teléfono;No;13;3;M;Subsidiado;EPS Nacional;0;70000;20;A09X;Diarrea y gastroenteritis;Asistió;0.15
+C000053;2025-01-03;8;08:20;Viernes;2025-01;Sede Sur;Odontología;Dr(a). S. Quintero;890203;Primera vez;WhatsApp;Sí;13;38;M;Contributivo;EPS Valle Salud;1;60000;30;K021;Caries de la dentina;No asistió;0.23
+C015702;2025-01-03;8;08:20;Viernes;2025-01;Sede Sur;Ginecología;Dr(a). G. Ochoa;890250;Primera vez;Web;Sí;12;50;F;Contributivo;EPS Andina;0;85000;20;Z348;Control de embarazo;Asistió;0.13
+C024594;2025-01-03;8;08:20;Viernes;2025-01;Sede Norte;Medicina general;Dr(a). L. Mejía;890201;Primera vez;Presencial;No;10;36;M;Contributivo;EPS Andina;0;45000;20;R51X;Cefalea;Asistió;0.16
+C001982;2025-01-03;8;08:40;Viernes;2025-01;Sede Oeste;Medicina general;Dr(a). J. Cárdenas;890201;Primera vez;Teléfono;No;9;30;M;Contributivo;EPS Pacífico;0;45000;20;J00X;Rinofaringitis aguda;Asistió;0.23
+C013803;2025-01-03;9;09:00;Viernes;2025-01;Sede Sur;Medicina general;Dr(a). D. Rincón;890201;Control;WhatsApp;Sí;14;59;F;Prepagada;—;0;45000;20;J00X;Rinofaringitis aguda;Asistió;0.07
+C004086;2025-01-03;9;09:20;Viernes;2025-01;Sede Sur;Medicina general;Dr(a). C. Valencia;890201;Control;Presencial;No;6;25;F;Contributivo;EPS Valle Salud;2;45000;20;R51X;Cefalea;Asistió;0.27
+C004786;2025-01-03;9;09:20;Viernes;2025-01;Sede Sur;Fisioterapia;Dr(a). A. Restrepo;931000;Control;Presencial;Sí;3;26;M;Contributivo;EPS Andina;0;40000;40;S934;Esguince de tobillo;No asistió;0.12
+C008523;2025-01-03;9;09:20;Viernes;2025-01;Sede Oeste;Medicina general;Dr(a). J. Cárdenas;890201;Primera vez;Presencial;No;4;58;F;Subsidiado;EPS Nacional;1;45000;20;R51X;Cefalea;Asistió;0.22
+C020130;2025-01-03;9;09:20;Viernes;2025-01;Sede Sur;Medicina general;Dr(a). D. Rincón;890201;Control;Presencial;No;0;29;F;Contributivo;EPS Valle Salud;1;45000;20;J00X;Rinofaringitis aguda;Asistió;0.19
+C027701;2025-01-03;9;09:20;Viernes;2025-01;Sede Norte;Cardiología;Dr(a). W. Ríos;890228;Control;WhatsApp;No;9;24;F;Subsidiado;EPS Nacional;0;110000;20;I500;Insuficiencia cardiaca;Asistió;0.15
+C008154;2025-01-03;9;09:40;Viernes;2025-01;Sede Norte;Ginecología;Dr(a). N. Londoño;890250;Primera vez;Web;Sí;12;29;F;Contributivo;EPS Pacífico;1;85000;20;Z348;Control de embarazo;Asistió;0.23
+C009343;2025-01-03;9;09:40;Viernes;2025-01;Sede Norte;Dermatología;Dr(a). K. Duque;890242;Control;Teléfono;No;21;27;F;Contributivo;EPS Pacífico;0;95000;20;L209;Dermatitis atópica;Asistió;0.32
+C014244;2025-01-03;9;09:40;Viernes;2025-01;Sede Oeste;Medicina general;Dr(a). J. Cárdenas;890201;Control;Presencial;No;6;64;F;Subsidiado;EPS Valle Salud;0;45000;20;E119;Diabetes mellitus tipo 2;No asistió;0.14
+C016846;2025-01-03;9;09:40;Viernes;2025-01;Sede Sur;Pediatría;Dr(a). F. Castaño;890283;Control;WhatsApp;Sí;2;4;F;Contributivo;EPS Pacífico;0;70000;20;A09X;Diarrea y gastroenteritis;Asistió;0.07
+C005056;2025-01-03;10;10:00;Viernes;2025-01;Sede Norte;Medicina interna;Dr(a). E. Patiño;890266;Control;Presencial;No;8;52;M;Prepagada;—;0;90000;20;E119;Diabetes mellitus tipo 2;Asistió;0.08
+C006560;2025-01-03;10;10:00;Viernes;2025-01;Sede Norte;Odontología;Dr(a). P. Salazar;890203;Primera vez;WhatsApp;Sí;23;27;F;Contributivo;EPS Pacífico;0;60000;30;K051;Gingivitis crónica;Asistió;0.25
+C023479;2025-01-03;10;10:00;Viernes;2025-01;Sede Centro;Odontología;Dr(a). R. Bermúdez;890203;Control;Teléfono;Sí;5;43;F;Contributivo;EPS Andina;0;60000;30;K051;Gingivitis crónica;Asistió;0.12
+C024609;2025-01-03;10;10:00;Viernes;2025-01;Sede Sur;Ginecología;Dr(a). G. Ochoa;890250;Primera vez;WhatsApp;Sí;19;39;F;Contributivo;EPS Pacífico;0;85000;20;N939;Hemorragia uterina anormal;Canceló IPS;0.15
+C000883;2025-01-03;10;10:20;Viernes;2025-01;Sede Norte;Ginecología;Dr(a). N. Londoño;890250;Primera vez;Teléfono;No;18;43;F;Contributivo;EPS Andina;2;85000;20;N939;Hemorragia uterina anormal;No asistió;0.4
+C004667;2025-01-03;10;10:40;Viernes;2025-01;Sede Norte;Fisioterapia;Dr(a). Z. Hoyos;931000;Primera vez;Teléfono;Sí;15;46;F;Contributivo;EPS Nacional;0;40000;40;M545;Lumbago;Asistió;0.16
+C004713;2025-01-03;10;10:40;Viernes;2025-01;Sede Norte;Pediatría;Dr(a). V. Arango;890283;Control;Teléfono;No;5;10;F;Subsidiado;EPS Pacífico;2;70000;20;J069;Infección respiratoria aguda;Asistió;0.22
+C014955;2025-01-03;10;10:40;Viernes;2025-01;Sede Norte;Cardiología;Dr(a). W. Ríos;890228;Control;Presencial;No;18;73;M;Contributivo;EPS Pacífico;0;110000;20;I10X;Hipertensión esencial;Canceló IPS;0.08
+C019928;2025-01-03;10;10:40;Viernes;2025-01;Sede Centro;Fisioterapia;Dr(a). C. Valencia;931000;Primera vez;Presencial;No;11;64;M;Contributivo;EPS Andina;0;40000;40;S934;Esguince de tobillo;Asistió;0.2
+C007073;2025-01-03;11;11:00;Viernes;2025-01;Sede Norte;Cardiología;Dr(a). W. Ríos;890228;Control;Teléfono;No;20;43;M;Contributivo;EPS Valle Salud;0;110000;20;I489;Fibrilación auricular;Asistió;0.12
+C013063;2025-01-03;11;11:00;Viernes;2025-01;Sede Norte;Medicina general;Dr(a). L. Mejía;890201;Control;Web;No;10;37;F;Contributivo;EPS Pacífico;0;45000;20;Z000;Examen médico general;Asistió;0.16
+C015104;2025-01-03;11;11:00;Viernes;2025-01;Sede Centro;Odontología;Dr(a). R. Bermúdez;890203;Control;Teléfono;Sí;9;38;F;Prepagada;—;0;60000;30;Z012;Examen odontológico;Asistió;0.09
+C016183;2025-01-03;11;11:00;Viernes;2025-01;Sede Norte;Medicina general;Dr(a). L. Mejía;890201;Primera vez;WhatsApp;No;3;38;M;Contributivo;EPS Andina;2;45000;20;I10X;Hipertensión esencial;Asistió;0.27
+C014820;2025-01-03;11;11:20;Viernes;2025-01;Sede Sur;Medicina general;Dr(a). D. Rincón;890201;Primera vez;Teléfono;No;11;39;M;Subsidiado;EPS Nacional;0;45000;20;E119;Diabetes mellitus tipo 2;Asistió;0.21
+C024815;2025-01-03;11;11:40;Viernes;2025-01;Sede Sur;Medicina general;Dr(a). C. Valencia;890201;Control;WhatsApp;Sí;6;32;F;Contributivo;EPS Valle Salud;0;45000;20;J00X;Rinofaringitis aguda;Canceló paciente;0.09
+C029150;2025-01-03;14;14:00;Viernes;2025-01;Sede Sur;Medicina interna;Dr(a). T. Zuluaga;890266;Control;Web;No;8;31;F;Subsidiado;EPS Nacional;0;90000;20;E119;Diabetes mellitus tipo 2;No asistió;0.16
+C029183;2025-01-03;14;14:00;Viernes;2025-01;Sede Sur;Odontología;Dr(a). S. Quintero;890203;Control;Teléfono;No;0;58;F;Subsidiado;EPS Valle Salud;0;60000;30;K051;Gingivitis crónica;Canceló paciente;0.21
+C016338;2025-01-03;14;14:20;Viernes;2025-01;Sede Oeste;Medicina general;Dr(a). J. Cárdenas;890201;Primera vez;Web;Sí;6;51;M;Subsidiado;EPS Andina;0;45000;20;Z000;Examen médico general;Asistió;0.12
+C001411;2025-01-03;14;14:40;Viernes;2025-01;Sede Centro;Odontología;Dr(a). R. Bermúdez;890203;Control;Teléfono;Sí;15;44;M;Subsidiado;EPS Pacífico;1;60000;30;K051;Gingivitis crónica;Canceló paciente;0.23
+C022042;2025-01-03;14;14:40;Viernes;2025-01;Sede Centro;Medicina general;Dr(a). M. Ospina;890201;Primera vez;Web;No;0;27;F;Subsidiado;EPS Valle Salud;0;45000;20;I10X;Hipertensión esencial;Asistió;0.22
+C029728;2025-01-03;14;14:40;Viernes;2025-01;Sede Sur;Medicina general;Dr(a). D. Rincón;890201;Control;WhatsApp;Sí;8;43;M;Contributivo;EPS Nacional;1;45000;20;R51X;Cefalea;Asistió;0.13
+C002547;2025-01-03;15;15:00;Viernes;2025-01;Sede Sur;Psicología;Dr(a). H. Giraldo;890208;Primera vez;Presencial;No;15;51;F;Subsidiado;EPS Andina;0;65000;40;F329;Episodio depresivo;Asistió;0.34
+C007364;2025-01-03;15;15:00;Viernes;2025-01;Sede Sur;Dermatología;Dr(a). B. Escobar;890242;Control;Web;No;12;31;F;Contributivo;EPS Valle Salud;0;95000;20;L209;Dermatitis atópica;No asistió;0.21
+C014869;2025-01-03;15;15:00;Viernes;2025-01;Sede Centro;Medicina general;Dr(a). M. Ospina;890201;Primera vez;Teléfono;No;12;39;F;Subsidiado;EPS Valle Salud;0;45000;20;R51X;Cefalea;Asistió;0.22
+C015571;2025-01-03;15;15:00;Viernes;2025-01;Sede Sur;Pediatría;Dr(a). F. Castaño;890283;Control;WhatsApp;Sí;10;3;M;Contributivo;EPS Pacífico;0;70000;20;J069;Infección respiratoria aguda;Asistió;0.08
+C028222;2025-01-03;15;15:00;Viernes;2025-01;Sede Norte;Medicina general;Dr(a). L. Mejía;890201;Primera vez;Web;No;10;33;F;Contributivo;EPS Pacífico;0;45000;20;E119;Diabetes mellitus tipo 2;Asistió;0.18
+C028946;2025-01-03;15;15:00;Viernes;2025-01;Sede Centro;Odontología;Dr(a). R. Bermúdez;890203;Primera vez;WhatsApp;Sí;17;70;M;Contributivo;EPS Pacífico;1;60000;30;Z012;Examen odontológico;Asistió;0.18
+C002514;2025-01-03;15;15:40;Viernes;2025-01;Sede Norte;Pediatría;Dr(a). V. Arango;890283;Primera vez;Teléfono;No;11;10;F;Subsidiado;EPS Andina;0;70000;20;J069;Infección respiratoria aguda;Asistió;0.17
+C009254;2025-01-03;15;15:40;Viernes;2025-01;Sede Sur;Fisioterapia;Dr(a). A. Restrepo;931000;Control;Presencial;Sí;6;50;M;Subsidiado;EPS Pacífico;0;40000;40;M751;Síndrome del manguito rotador;Asistió;0.11
+C028655;2025-01-03;15;15:40;Viernes;2025-01;Sede Norte;Medicina general;Dr(a). A. Restrepo;890201;Control;Web;No;21;60;F;Contributivo;EPS Andina;0;45000;20;J00X;Rinofaringitis aguda;Asistió;0.19
+C016641;2025-01-03;16;16:00;Viernes;2025-01;Sede Norte;Cardiología;Dr(a). W. Ríos;890228;Primera vez;Presencial;No;24;39;F;Subsidiado;EPS Valle Salud;0;110000;20;I10X;Hipertensión esencial;Asistió;0.15
+C020768;2025-01-03;16;16:00;Viernes;2025-01;Sede Norte;Cardiología;Dr(a). W. Ríos;890228;Primera vez;Teléfono;Sí;20;57;F;Contributivo;EPS Andina;3;110000;20;I10X;Hipertensión esencial;No asistió;0.18
+C026979;2025-01-03;16;16:00;Viernes;2025-01;Sede Sur;Medicina general;Dr(a). C. Valencia;890201;Primera vez;Teléfono;No;14;37;M;Contributivo;EPS Nacional;1;45000;20;J00X;Rinofaringitis aguda;Asistió;0.26
+C002984;2025-01-03;16;16:20;Viernes;2025-01;Sede Sur;Ginecología;Dr(a). G. Ochoa;890250;Primera vez;Teléfono;No;9;52;F;Particular;—;2;85000;20;N939;Hemorragia uterina anormal;Canceló IPS;0.35
+C012192;2025-01-03;16;16:20;Viernes;2025-01;Sede Sur;Pediatría;Dr(a). F. Castaño;890283;Control;Teléfono;Sí;9;8;M;Contributivo;EPS Nacional;0;70000;20;Z001;Control de crecimiento y desarrollo;Asistió;0.08
+C018839;2025-01-03;16;16:20;Viernes;2025-01;Sede Norte;Ginecología;Dr(a). N. Londoño;890250;Primera vez;Presencial;No;16;59;F;Particular;—;0;85000;20;Z014;Examen ginecológico;Asistió;0.2
+C027569;2025-01-03;16;16:20;Viernes;2025-01;Sede Norte;Cardiología;Dr(a). W. Ríos;890228;Primera vez;Web;No;22;23;M;Contributivo;EPS Nacional;1;110000;20;I10X;Hipertensión esencial;Asistió;0.26
+C013570;2025-01-03;16;16:40;Viernes;2025-01;Sede Norte;Nutrición;Dr(a). O. Marín;890206;Control;Teléfono;No;10;24;M;Contributivo;EPS Andina;0;50000;30;Z713;Consejería dietética;Asistió;0.32
+C016984;2025-01-03;16;16:40;Viernes;2025-01;Sede Norte;Medicina general;Dr(a). L. Mejía;890201;Primera vez;WhatsApp;Sí;0;85;F;Contributivo;EPS Valle Salud;0;45000;20;E119;Diabetes mellitus tipo 2;No asistió;0.07
+C018599;2025-01-03;16;16:40;Viernes;2025-01;Sede Norte;Odontología;Dr(a). P. Salazar;890203;Control;Teléfono;Sí;0;45;F;Contributivo;EPS Andina;3;60000;30;Z012;Examen odontológico;Asistió;0.23
+C019142;2025-01-03;16;16:40;Viernes;2025-01;Sede Norte;Pediatría;Dr(a). V. Arango;890283;Control;Teléfono;No;13;2;F;Subsidiado;EPS Andina;1;70000;20;Z001;Control de crecimiento y desarrollo;Asistió;0.2
+C007651;2025-01-03;17;17:00;Viernes;2025-01;Sede Norte;Medicina general;Dr(a). L. Mejía;890201;Control;Teléfono;No;17;53;F;Contributivo;EPS Valle Salud;0;45000;20;I10X;Hipertensión esencial;No asistió;0.21
+C019427;2025-01-03;17;17:00;Viernes;2025-01;Sede Norte;Odontología;Dr(a). P. Salazar;890203;Primera vez;Teléfono;Sí;14;49;M;Contributivo;EPS Valle Salud;0;60000;30;K051;Gingivitis crónica;Asistió;0.2
+C010573;2025-01-03;17;17:40;Viernes;2025-01;Sede Sur;Pediatría;Dr(a). F. Castaño;890283;Primera vez;Presencial;No;14;11;M;Contributivo;EPS Pacífico;0;70000;20;A09X;Diarrea y gastroenteritis;Asistió;0.16
+C011470;2025-01-04;7;07:00;Sábado;2025-01;Sede Sur;Psicología;Dr(a). H. Giraldo;890208;Control;Presencial;Sí;6;52;M;Contributivo;EPS Nacional;0;65000;40;Z634;Duelo;Asistió;0.2
+C023754;2025-01-04;7;07:00;Sábado;2025-01;Sede Sur;Medicina general;Dr(a). C. Valencia;890201;Primera vez;Presencial;Sí;12;48;F;Subsidiado;EPS Nacional;0;45000;20;Z000;Examen médico general;Asistió;0.18
+C004744;2025-01-04;7;07:40;Sábado;2025-01;Sede Norte;Fisioterapia;Dr(a). Z. Hoyos;931000;Primera vez;WhatsApp;Sí;9;65;M;Particular;—;0;40000;40;S934;Esguince de tobillo;Asistió;0.16
+C010135;2025-01-04;7;07:40;Sábado;2025-01;Sede Sur;Odontología;Dr(a). S. Quintero;890203;Control;WhatsApp;No;3;48;M;Prepagada;—;0;60000;30;K021;Caries de la dentina;Asistió;0.21
+C005328;2025-01-04;8;08:00;Sábado;2025-01;Sede Norte;Ginecología;Dr(a). N. Londoño;890250;Control;Teléfono;No;13;39;F;Prepagada;—;0;85000;20;Z348;Control de embarazo;Asistió;0.15
+C024876;2025-01-04;8;08:00;Sábado;2025-01;Sede Norte;Medicina general;Dr(a). A. Restrepo;890201;Control;WhatsApp;Sí;12;59;F;Contributivo;EPS Pacífico;2;45000;20;Z000;Examen médico general;Asistió;0.2
+C029587;2025-01-04;8;08:00;Sábado;2025-01;Sede Norte;Psicología;Dr(a). I. Montoya;890208;Primera vez;WhatsApp;Sí;8;51;F;Subsidiado;EPS Pacífico;0;65000;40;F419;Trastorno de ansiedad;Asistió;0.25
+C002339;2025-01-04;8;08:20;Sábado;2025-01;Sede Sur;Odontología;Dr(a). S. Quintero;890203;Control;Web;No;10;38;M;Subsidiado;EPS Valle Salud;0;60000;30;K051;Gingivitis crónica;Asistió;0.29
+C005330;2025-01-04;8;08:20;Sábado;2025-01;Sede Sur;Medicina interna;Dr(a). T. Zuluaga;890266;Control;Presencial;Sí;21;60;M;Subsidiado;EPS Pacífico;0;90000;20;E785;Hiperlipidemia;No asistió;0.12
+C010717;2025-01-04;8;08:40;Sábado;2025-01;Sede Sur;Medicina general;Dr(a). D. Rincón;890201;Control;WhatsApp;Sí;4;44;M;Subsidiado;EPS Pacífico;0;45000;20;R51X;Cefalea;Asistió;0.11
+C012296;2025-01-04;8;08:40;Sábado;2025-01;Sede Oeste;Medicina general;Dr(a). J. Cárdenas;890201;Control;WhatsApp;Sí;17;42;F;Contributivo;EPS Valle Salud;0;45000;20;Z000;Examen médico general;Asistió;0.12
+C013344;2025-01-04;8;08:40;Sábado;2025-01;Sede Sur;Dermatología;Dr(a). B. Escobar;890242;Control;WhatsApp;Sí;22;64;M;Contributivo;EPS Andina;0;95000;20;L209;Dermatitis atópica;Asistió;0.18
+C015380;2025-01-04;8;08:40;Sábado;2025-01;Sede Sur;Pediatría;Dr(a). F. Castaño;890283;Primera vez;Web;Sí;19;6;F;Subsidiado;EPS Pacífico;0;70000;20;A09X;Diarrea y gastroenteritis;No asistió;0.14
+C002127;2025-01-04;9;09:00;Sábado;2025-01;Sede Sur;Nutrición;Dr(a). Y. Correa;890206;Primera vez;Teléfono;No;9;41;M;Particular;—;1;50000;30;E440;Desnutrición moderada;No asistió;0.45
+C024303;2025-01-04;9;09:00;Sábado;2025-01;Sede Sur;Nutrición;Dr(a). Y. Correa;890206;Control;Web;Sí;6;40;F;Particular;—;0;50000;30;E669;Obesidad;Asistió;0.16
+C027994;2025-01-04;9;09:00;Sábado;2025-01;Sede Centro;Fisioterapia;Dr(a). C. Valencia;931000;Control;Teléfono;No;21;35;F;Contributivo;EPS Nacional;0;40000;40;M751;Síndrome del manguito rotador;No asistió;0.27
+C017356;2025-01-04;9;09:20;Sábado;2025-01;Sede Sur;Medicina general;Dr(a). C. Valencia;890201;Primera vez;Teléfono;No;0;84;M;Contributivo;EPS Nacional;0;45000;20;E119;Diabetes mellitus tipo 2;Asistió;0.13
+C000865;2025-01-04;9;09:40;Sábado;2025-01;Sede Norte;Fisioterapia;Dr(a). Z. Hoyos;931000;Control;Presencial;No;23;59;F;Prepagada;—;0;40000;40;M545;Lumbago;Asistió;0.17
+C004000;2025-01-04;9;09:40;Sábado;2025-01;Sede Centro;Fisioterapia;Dr(a). C. Valencia;931000;Primera vez;Teléfono;Sí;2;46;M;Contributivo;EPS Nacional;0;40000;40;M545;Lumbago;Asistió;0.14
+C004177;2025-01-04;9;09:40;Sábado;2025-01;Sede Norte;Ginecología;Dr(a). N. Londoño;890250;Primera vez;Presencial;Sí;7;18;F;Contributivo;EPS Andina;0;85000;20;N939;Hemorragia uterina anormal;Asistió;0.15
+C012766;2025-01-04;10;10:00;Sábado;2025-01;Sede Norte;Medicina general;Dr(a). A. Restrepo;890201;Primera vez;WhatsApp;Sí;9;43;M;Prepagada;—;0;45000;20;I10X;Hipertensión esencial;Asistió;0.09
+C015752;2025-01-04;10;10:00;Sábado;2025-01;Sede Norte;Odontología;Dr(a). P. Salazar;890203;Primera vez;Presencial;No;10;43;F;Contributivo;EPS Pacífico;1;60000;30;K051;Gingivitis crónica;No asistió;0.34
+C004790;2025-01-04;10;10:20;Sábado;2025-01;Sede Centro;Medicina general;Dr(a). M. Ospina;890201;Control;WhatsApp;Sí;4;61;M;Subsidiado;EPS Pacífico;0;45000;20;Z000;Examen médico general;Asistió;0.11
+C009538;2025-01-04;10;10:20;Sábado;2025-01;Sede Sur;Medicina general;Dr(a). D. Rincón;890201;Control;Teléfono;No;5;65;F;Contributivo;EPS Valle Salud;0;45000;20;R51X;Cefalea;Asistió;0.12
+C020563;2025-01-04;10;10:20;Sábado;2025-01;Sede Norte;Dermatología;Dr(a). K. Duque;890242;Primera vez;Presencial;Sí;27;49;M;Contributivo;EPS Andina;0;95000;20;L209;Dermatitis atópica;Canceló IPS;0.19
+C025684;2025-01-04;10;10:20;Sábado;2025-01;Sede Sur;Medicina general;Dr(a). C. Valencia;890201;Primera vez;Teléfono;No;13;81;F;Subsidiado;EPS Andina;0;45000;20;I10X;Hipertensión esencial;Canceló paciente;0.19
+C028496;2025-01-04;10;10:20;Sábado;2025-01;Sede Centro;Odontología;Dr(a). R. Bermúdez;890203;Control;Presencial;No;13;48;M;Contributivo;EPS Pacífico;2;60000;30;K051;Gingivitis crónica;No asistió;0.38
+C008199;2025-01-04;10;10:40;Sábado;2025-01;Sede Norte;Odontología;Dr(a). P. Salazar;890203;Control;WhatsApp;Sí;11;64;F;Particular;—;0;60000;30;K051;Gingivitis crónica;Asistió;0.16
+C021924;2025-01-04;10;10:40;Sábado;2025-01;Sede Norte;Odontología;Dr(a). P. Salazar;890203;Primera vez;Presencial;Sí;9;51;F;Prepagada;—;0;60000;30;K051;Gingivitis crónica;Asistió;0.11
+C029747;2025-01-04;10;10:40;Sábado;2025-01;Sede Norte;Psicología;Dr(a). I. Montoya;890208;Primera vez;Teléfono;No;1;55;F;Contributivo;EPS Pacífico;0;65000;40;F419;Trastorno de ansiedad;Canceló IPS;0.31
+C000543;2025-01-04;11;11:00;Sábado;2025-01;Sede Norte;Medicina general;Dr(a). A. Restrepo;890201;Primera vez;Web;Sí;11;32;F;Prepagada;—;0;45000;20;R51X;Cefalea;Asistió;0.09
+C001497;2025-01-04;11;11:00;Sábado;2025-01;Sede Norte;Pediatría;Dr(a). V. Arango;890283;Primera vez;WhatsApp;Sí;10;5;M;Contributivo;EPS Pacífico;0;70000;20;Z001;Control de crecimiento y desarrollo;Asistió;0.1
+C007241;2025-01-04;11;11:00;Sábado;2025-01;Sede Sur;Medicina general;Dr(a). C. Valencia;890201;Control;Teléfono;No;8;30;F;Particular;—;0;45000;20;R51X;Cefalea;No asistió;0.22
+C013209;2025-01-04;11;11:00;Sábado;2025-01;Sede Norte;Medicina general;Dr(a). L. Mejía;890201;Control;WhatsApp;Sí;3;36;F;Contributivo;EPS Andina;0;45000;20;E119;Diabetes mellitus tipo 2;Canceló paciente;0.1
+C021893;2025-01-04;11;11:00;Sábado;2025-01;Sede Norte;Odontología;Dr(a). P. Salazar;890203;Primera vez;Web;No;10;75;M;Contributivo;EPS Pacífico;0;60000;30;K021;Caries de la dentina;Asistió;0.22
+C002553;2025-01-04;11;11:20;Sábado;2025-01;Sede Oeste;Medicina general;Dr(a). J. Cárdenas;890201;Control;Teléfono;Sí;5;30;M;Subsidiado;EPS Andina;0;45000;20;J00X;Rinofaringitis aguda;Asistió;0.15
+C012754;2025-01-04;11;11:40;Sábado;2025-01;Sede Sur;Nutrición;Dr(a). Y. Correa;890206;Control;Presencial;Sí;3;62;F;Contributivo;EPS Nacional;0;50000;30;Z713;Consejería dietética;Canceló paciente;0.13
+C029128;2025-01-04;11;11:40;Sábado;2025-01;Sede Sur;Fisioterapia;Dr(a). A. Restrepo;931000;Primera vez;Teléfono;No;12;88;F;Subsidiado;EPS Pacífico;1;40000;40;S934;Esguince de tobillo;No asistió;0.32
+C000755;2025-01-04;14;14:20;Sábado;2025-01;Sede Centro;Medicina general;Dr(a). M. Ospina;890201;Control;Teléfono;Sí;14;37;M;Subsidiado;EPS Nacional;0;45000;20;I10X;Hipertensión esencial;Asistió;0.14
+C019580;2025-01-04;14;14:20;Sábado;2025-01;Sede Sur;Fisioterapia;Dr(a). A. Restrepo;931000;Primera vez;Web;No;16;34;F;Contributivo;EPS Andina;0;40000;40;S934;Esguince de tobillo;Asistió;0.3
+C024706;2025-01-04;14;14:20;Sábado;2025-01;Sede Norte;Pediatría;Dr(a). V. Arango;890283;Control;Teléfono;No;15;3;F;Prepagada;—;0;70000;20;Z001;Control de crecimiento y desarrollo;No asistió;0.11
+C024756;2025-01-04;14;14:20;Sábado;2025-01;Sede Norte;Medicina general;Dr(a). L. Mejía;890201;Control;Teléfono;No;6;40;M;Subsidiado;EPS Andina;0;45000;20;R51X;Cefalea;Canceló paciente;0.19
+C000246;2025-01-04;14;14:40;Sábado;2025-01;Sede Norte;Ginecología;Dr(a). N. Londoño;890250;Primera vez;WhatsApp;Sí;9;37;F;Contributivo;EPS Pacífico;0;85000;20;N939;Hemorragia uterina anormal;Asistió;0.15
+C011208;2025-01-04;14;14:40;Sábado;2025-01;Sede Norte;Pediatría;Dr(a). V. Arango;890283;Primera vez;Teléfono;No;10;11;F;Contributivo;EPS Nacional;0;70000;20;Z001;Control de crecimiento y desarrollo;Asistió;0.17
+C020135;2025-01-04;15;15:00;Sábado;2025-01;Sede Sur;Dermatología;Dr(a). B. Escobar;890242;Primera vez;WhatsApp;Sí;21;37;M;Subsidiado;EPS Valle Salud;1;95000;20;L209;Dermatitis atópica;Canceló paciente;0.32
+C000910;2025-01-04;15;15:20;Sábado;2025-01;Sede Sur;Pediatría;Dr(a). F. Castaño;890283;Primera vez;Teléfono;No;11;8;F;Contributivo;EPS Pacífico;0;70000;20;Z001;Control de crecimiento y desarrollo;Asistió;0.17
+C011558;2025-01-04;15;15:20;Sábado;2025-01;Sede Sur;Medicina general;Dr(a). D. Rincón;890201;Primera vez;WhatsApp;Sí;2;41;M;Contributivo;EPS Valle Salud;0;45000;20;I10X;Hipertensión esencial;Asistió;0.11
+C011972;2025-01-04;15;15:40;Sábado;2025-01;Sede Sur;Odontología;Dr(a). S. Quintero;890203;Primera vez;Web;No;10;54;F;Contributivo;EPS Andina;1;60000;30;K021;Caries de la dentina;No asistió;0.4
+C019187;2025-01-04;15;15:40;Sábado;2025-01;Sede Sur;Ginecología;Dr(a). G. Ochoa;890250;Primera vez;Teléfono;No;32;34;F;Subsidiado;EPS Andina;0;85000;20;N939;Hemorragia uterina anormal;Asistió;0.38
+C021320;2025-01-04;15;15:40;Sábado;2025-01;Sede Norte;Medicina general;Dr(a). L. Mejía;890201;Control;Presencial;Sí;3;55;M;Subsidiado;EPS Andina;0;45000;20;E119;Diabetes mellitus tipo 2;Asistió;0.09
+C024701;2025-01-04;15;15:40;Sábado;2025-01;Sede Sur;Fisioterapia;Dr(a). A. Restrepo;931000;Primera vez;WhatsApp;No;6;42;M;Contributivo;EPS Nacional;0;40000;40;M545;Lumbago;Asistió;0.25

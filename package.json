@@ -1,0 +1,17 @@
+{
+  "name": "healthcare-noshow-dashboards",
+  "version": "1.0.0",
+  "description": "Appointment no-show dashboards (HTML + Power BI) on synthetic outpatient data",
+  "main": "gen_data.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "echarts": "^5.5.1",
+    "pdfjs-dist": "^3.11.174"
+  }
+}

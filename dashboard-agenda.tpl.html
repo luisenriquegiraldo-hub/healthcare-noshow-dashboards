@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Appointments & No-show Analytics</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#0b1620; --panel:#112230; --panel2:#15293a; --line:#1f3a4f; --txt:#e9f1f7; --mut:#8aa3b6; --lime:#C6F24A; --amber:#FFB547; --red:#ff6b6b; --cyan:#4fd1c5; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--txt); font-family:Inter, 'Segoe UI', sans-serif; }
+  .wrap { max-width:1880px; margin:0 auto; padding:22px 26px 28px; }
+  header { display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+  .brand { display:flex; align-items:center; gap:12px; }
+  .logo { width:42px; height:42px; border-radius:12px; background:linear-gradient(135deg,var(--lime),#7fd65a); display:grid; place-items:center; color:#0b1620; font-weight:900; font-size:22px; }
+  h1 { margin:0; font-size:26px; font-weight:900; letter-spacing:-.3px; }
+  .sub { color:var(--mut); font-size:13px; font-weight:600; margin-top:2px; }
+  .badge { margin-left:auto; padding:6px 12px; border-radius:999px; border:1.5px solid var(--amber); color:var(--amber); font-size:12px; font-weight:800; letter-spacing:1px; }
+  .filters { display:flex; gap:10px; flex-wrap:wrap; margin:18px 0 16px; }
+  select, .lang { background:var(--panel); color:var(--txt); border:1.5px solid var(--line); border-radius:10px; padding:9px 12px; font:600 14px Inter, sans-serif; cursor:pointer; }
+  .lang { border-color:var(--lime); color:var(--lime); }
+  .kpis { display:grid; grid-template-columns:repeat(5,1fr); gap:14px; }
+  .kpi { background:var(--panel); border:1.5px solid var(--line); border-radius:16px; padding:16px 18px; position:relative; overflow:hidden; }
+  .kpi .l { color:var(--mut); font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:.6px; }
+  .kpi .v { font-size:38px; font-weight:900; margin-top:6px; letter-spacing:-1px; }
+  .kpi .d { font-size:13px; color:var(--mut); margin-top:4px; font-weight:600; }
+  .kpi.alert .v { color:var(--red); } .kpi.good .v { color:var(--lime); } .kpi.warn .v { color:var(--amber); }
+  .kpi::after { content:''; position:absolute; right:-30px; top:-30px; width:110px; height:110px; border-radius:50%; background:radial-gradient(circle, rgba(198,242,74,.10), transparent 70%); }
+  .grid { display:grid; gap:14px; margin-top:14px; }
+  .g2 { grid-template-columns:1.55fr 1fr; } .g3 { grid-template-columns:1.2fr 1fr 1fr; }
+  .card { background:var(--panel); border:1.5px solid var(--line); border-radius:16px; padding:14px 16px 8px; }
+  .card h3 { margin:0 0 2px; font-size:16px; font-weight:800; }
+  .card .h { color:var(--mut); font-size:12.5px; font-weight:600; }
+  .chart { width:100%; height:300px; }
+  .chips { display:flex; gap:8px; flex-wrap:wrap; align-items:center; min-height:34px; margin:-4px 0 12px; }
+  .chip { background:rgba(198,242,74,.12); border:1.5px solid var(--lime); color:var(--lime); border-radius:999px; padding:5px 12px; font-size:13px; font-weight:700; cursor:pointer; }
+  .chip:hover { background:rgba(198,242,74,.22); } .chip.clear { border-color:var(--mut); color:var(--mut); background:none; }
+  .hint { color:var(--mut); font-size:13px; font-weight:600; }
+  .chart { cursor:pointer; }
+  .insight { margin-top:14px; background:linear-gradient(90deg, rgba(198,242,74,.12), rgba(255,181,71,.06)); border:1.5px solid rgba(198,242,74,.45); border-radius:16px; padding:14px 18px; display:flex; gap:28px; flex-wrap:wrap; font-size:15px; font-weight:600; }
+  .insight b { color:var(--lime); }
+  footer { margin-top:12px; color:var(--mut); font-size:12px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; }
+  @media (max-width:1100px) { .kpis { grid-template-columns:repeat(2,1fr); } .g2, .g3 { grid-template-columns:1fr; } }
+  .tabs { display:flex; gap:6px; margin-left:18px; } .tabs a { text-decoration:none; padding:8px 14px; border-radius:10px; font:800 13.5px Inter, sans-serif; color:var(--mut); border:1.5px solid var(--line); background:var(--panel); } .tabs a.on { color:#0b1620; background:var(--lime); border-color:var(--lime); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><div class="logo">+</div><div><h1 data-i18n="title"></h1><div class="sub" data-i18n="subtitle"></div></div></div>
+    <nav class="tabs"><a href="dashboard-agenda.html" class="on" id="tab1">1 · Inasistencia</a><a href="dashboard-riesgo.html" class="" id="tab2">2 · Riesgo y recordatorios</a></nav>
+    <div class="badge" data-i18n="badge"></div>
+  </header>
+  <div class="filters">
+    <select id="fSede"></select><select id="fEsp"></select><select id="fPer"></select>
+    <button class="lang" id="lang">ES / EN</button>
+  </div>
+  <div class="chips" id="chips"></div>
+  <div class="kpis">
+    <div class="kpi"><div class="l" data-i18n="k1"></div><div class="v" id="kTotal"></div><div class="d" id="kTotalD"></div></div>
+    <div class="kpi alert"><div class="l" data-i18n="k2"></div><div class="v" id="kNS"></div><div class="d" id="kNSD"></div></div>
+    <div class="kpi warn"><div class="l" data-i18n="k3"></div><div class="v" id="kLost"></div><div class="d" id="kLostD"></div></div>
+    <div class="kpi"><div class="l" data-i18n="k4"></div><div class="v" id="kWait"></div><div class="d" id="kWaitD"></div></div>
+    <div class="kpi good"><div class="l" data-i18n="k5"></div><div class="v" id="kRem"></div><div class="d" id="kRemD"></div></div>
+  </div>
+  <div class="grid g2">
+    <div class="card"><h3 data-i18n="c1"></h3><div class="h" data-i18n="c1h"></div><div class="chart" id="cTrend"></div></div>
+    <div class="card"><h3 data-i18n="c2"></h3><div class="h" data-i18n="c2h"></div><div class="chart" id="cHeat"></div></div>
+  </div>
+  <div class="grid g3">
+    <div class="card"><h3 data-i18n="c3"></h3><div class="h" data-i18n="c3h"></div><div class="chart" id="cEsp"></div></div>
+    <div class="card"><h3 data-i18n="c4"></h3><div class="h" data-i18n="c4h"></div><div class="chart" id="cWait"></div></div>
+    <div class="card"><h3 data-i18n="c5"></h3><div class="h" data-i18n="c5h"></div><div class="chart" id="cCanal"></div></div>
+  </div>
+  <div class="insight" id="insight"></div>
+  <footer><span data-i18n="foot"></span><span>ECharts · Power BI-ready · RIPS</span></footer>
+</div>
+<script>/*ECHARTS*/</script>
+<script>
+const D = /*DATA*/;
+const T = {
+  es: { title:'Agenda e inasistencia', subtitle:'Clínica Ejemplo · consulta externa · 18 meses', badge:'DATOS DE EJEMPLO', all:'Todas', allSede:'Todas las sedes', allEsp:'Todas las especialidades', per:['Todo el periodo','Últimos 6 meses','Últimos 3 meses'],
+    k1:'Citas programadas', k2:'Inasistencia', k3:'Ingresos perdidos', k4:'Espera promedio', k5:'Efecto del recordatorio',
+    c1:'Citas e inasistencia por mes', c1h:'Barras: citas · línea: % de pacientes que no llegaron', c2:'¿Cuándo falta más la gente?', c2h:'% de inasistencia por día y hora',
+    c3:'Inasistencia por especialidad', c3h:'Ordenado de mayor a menor', c4:'Más espera, más inasistencia', c4h:'% de inasistencia según días entre agendar y la cita', c5:'Canal de agendamiento', c5h:'% de inasistencia por canal',
+    citas:'Citas', ns:'Inasistencia', days:'días', foot:'Datos ficticios con estructura RIPS (Res. 3374/2000). Ningún dato de pacientes reales.',
+    dTotal:(a)=>`${a} asistidas`, dNS:(n)=>`${n} citas perdidas`, dLost:'COP · valor de las citas no atendidas', dWait:'días entre agendar y la cita', dRem:(a,b)=>`sin recordatorio ${a} · con ${b}`,
+    ins:(d,h,e,w)=>[`Peor franja: <b>${d} ${h}</b>`,`Especialidad crítica: <b>${e}</b>`,`Con recordatorio la inasistencia baja <b>${w}</b>`],
+    dias:['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'], dshort:['Lun','Mar','Mié','Jue','Vie','Sáb'] },
+  en: { title:'Appointments & No-show Analytics', subtitle:'Sample Clinic · outpatient · 18 months', badge:'SAMPLE DATA', all:'All', allSede:'All sites', allEsp:'All specialties', per:['Whole period','Last 6 months','Last 3 months'],
+    k1:'Scheduled appointments', k2:'No-show rate', k3:'Lost revenue', k4:'Average wait', k5:'Reminder effect',
+    c1:'Appointments and no-shows by month', c1h:'Bars: appointments · line: % of patients who did not show up', c2:'When do patients miss the most?', c2h:'No-show % by weekday and hour',
+    c3:'No-shows by specialty', c3h:'Sorted from highest to lowest', c4:'Longer wait, more no-shows', c4h:'No-show % by days between booking and visit', c5:'Booking channel', c5h:'No-show % by channel',
+    citas:'Appointments', ns:'No-show', days:'days', foot:'Synthetic data with the Colombian RIPS structure. No real patient data.',
+    dTotal:(a)=>`${a} attended`, dNS:(n)=>`${n} missed appointments`, dLost:'COP · value of missed visits', dWait:'days from booking to visit', dRem:(a,b)=>`without reminder ${a} · with ${b}`,
+    ins:(d,h,e,w)=>[`Worst slot: <b>${d} ${h}</b>`,`Critical specialty: <b>${e}</b>`,`Reminders cut no-shows by <b>${w}</b>`],
+    dias:['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'], dshort:['Mon','Tue','Wed','Thu','Fri','Sat'] },
+};
+const ESP_EN = {'Medicina general':'General medicine','Odontología':'Dentistry','Pediatría':'Pediatrics','Ginecología':'Gynecology','Medicina interna':'Internal medicine','Psicología':'Psychology','Dermatología':'Dermatology','Nutrición':'Nutrition','Cardiología':'Cardiology','Fisioterapia':'Physiotherapy'};
+const CANAL_EN = {'Teléfono':'Phone','WhatsApp':'WhatsApp','Presencial':'In person','Web':'Web'};
+let L = 'es';
+const t = (k) => T[L][k];
+const trEsp = (s) => L === 'en' ? (ESP_EN[s] || s) : s;
+const trCanal = (s) => L === 'en' ? (CANAL_EN[s] || s) : s;
+const { dicts, cols, n } = D;
+const NS = dicts.estado.indexOf('No asistió'), OK = dicts.estado.indexOf('Asistió');
+const DIA_ORDER = ['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
+const HORAS = [7,8,9,10,11,14,15,16,17];
+const fmt = (x) => x.toLocaleString(L === 'es' ? 'es-CO' : 'en-US');
+const pct = (a, b) => b ? a / b * 100 : 0;
+const money = (x) => x >= 1e9 ? `$${(x/1e9).toFixed(2)} B` : `$${(x/1e6).toFixed(0)} M`;
+const C = { lime:'#C6F24A', amber:'#FFB547', red:'#ff6b6b', mut:'#8aa3b6', line:'#1f3a4f', txt:'#e9f1f7', cyan:'#4fd1c5' };
+const charts = {};
+const mk = (id) => (charts[id] = charts[id] || echarts.init(document.getElementById(id), null, { renderer:'canvas' }));
+const axis = { axisLine:{ lineStyle:{ color:C.line } }, axisLabel:{ color:C.mut, fontFamily:'Inter', fontSize:12 }, splitLine:{ lineStyle:{ color:'#173042' } } };
+
+function fillFilters() {
+  const s = document.getElementById('fSede'), e = document.getElementById('fEsp'), p = document.getElementById('fPer');
+  const sv = s.value, ev = e.value, pv = p.value;
+  s.innerHTML = `<option value="-1">${t('allSede')}</option>` + dicts.sede.map((x,i)=>`<option value="${i}">${x}</option>`).join('');
+  e.innerHTML = `<option value="-1">${t('allEsp')}</option>` + dicts.especialidad.map((x,i)=>`<option value="${i}">${trEsp(x)}</option>`).join('');
+  p.innerHTML = t('per').map((x,i)=>`<option value="${i}">${x}</option>`).join('');
+  if (sv) s.value = sv; if (ev) e.value = ev; if (pv) p.value = pv;
+}
+// Cross-filter state set by clicking charts (null = no filter on that dimension).
+const S = { mes:null, dh:null, esp:null, wait:null, canal:null };
+const B = [[0,3],[4,7],[8,14],[15,21],[22,30],[31,99]];
+const bucket = (d) => B.findIndex(([a,z]) => d >= a && d <= z);
+// Rows passing the dropdowns plus every click filter except the one named in "skip" (so a chart keeps showing its own options).
+function filtered(skip) {
+  const s = +document.getElementById('fSede').value, e = +document.getElementById('fEsp').value, p = +document.getElementById('fPer').value;
+  const minMes = p === 0 ? 0 : dicts.mes.length - (p === 1 ? 6 : 3);
+  const idx = [];
+  for (let i = 0; i < n; i++) {
+    if (s >= 0 && cols.sede[i] !== s) continue;
+    if (e >= 0 && cols.especialidad[i] !== e) continue;
+    if (cols.mes[i] < minMes) continue;
+    if (skip !== 'mes' && S.mes !== null && cols.mes[i] !== S.mes) continue;
+    if (skip !== 'dh' && S.dh && (cols.dia[i] !== S.dh[0] || cols.hora[i] !== S.dh[1])) continue;
+    if (skip !== 'esp' && S.esp !== null && cols.especialidad[i] !== S.esp) continue;
+    if (skip !== 'wait' && S.wait !== null && bucket(cols.dias_espera[i]) !== S.wait) continue;
+    if (skip !== 'canal' && S.canal !== null && cols.canal[i] !== S.canal) continue;
+    idx.push(i);
+  }
+  return idx;
+}
+const toggle = (k, v) => { S[k] = JSON.stringify(S[k]) === JSON.stringify(v) ? null : v; render(); };
+const dim = (on) => on ? 1 : 0.28;
+function chips() {
+  const c = [], dshort = (di) => T[L].dias[DIA_ORDER.indexOf(dicts.dia[di])];
+  if (S.mes !== null) c.push(['mes', dicts.mes[S.mes]]);
+  if (S.dh) c.push(['dh', `${dshort(S.dh[0])} ${S.dh[1]}:00`]);
+  if (S.esp !== null) c.push(['esp', trEsp(dicts.especialidad[S.esp])]);
+  if (S.wait !== null) { const [a,z] = B[S.wait]; c.push(['wait', (z > 90 ? `${a}+` : `${a}-${z}`) + ' ' + t('days')]); }
+  if (S.canal !== null) c.push(['canal', trCanal(dicts.canal[S.canal])]);
+  document.getElementById('chips').innerHTML = c.length
+    ? c.map(([k, v]) => `<span class="chip" data-k="${k}">${v} ✕</span>`).join('') + `<span class="chip clear" data-k="all">${L === 'es' ? 'Quitar filtros' : 'Clear filters'}</span>`
+    : `<span class="hint">👆 ${L === 'es' ? 'Haz clic en cualquier gráfico para filtrar todo el tablero' : 'Click any chart to filter the whole dashboard'}</span>`;
+  document.querySelectorAll('#chips .chip').forEach((el) => el.onclick = () => { if (el.dataset.k === 'all') Object.keys(S).forEach((k) => S[k] = null); else S[el.dataset.k] = null; render(); });
+}
+function render() {
+  document.querySelectorAll('[data-i18n]').forEach((el) => { el.textContent = t(el.dataset.i18n); });
+  document.getElementById('tab1').textContent = L === 'es' ? '1 · Inasistencia' : '1 · No-shows'; document.getElementById('tab2').textContent = L === 'es' ? '2 · Riesgo y recordatorios' : '2 · Risk & reminders';
+  document.getElementById('tab1').href = 'dashboard-agenda.html' + (L === 'en' ? '?lang=en' : ''); document.getElementById('tab2').href = 'dashboard-riesgo.html' + (L === 'en' ? '?lang=en' : '');
+  document.documentElement.lang = L;
+  chips();
+  const idx = filtered();
+  let nsN = 0, okN = 0, lost = 0, waitSum = 0, rem = [0,0,0,0];
+  for (const i of idx) { const ns = cols.estado[i] === NS; if (ns) { nsN++; lost += cols.valor[i]; } if (cols.estado[i] === OK) okN++; waitSum += cols.dias_espera[i];
+    const r = cols.recordatorio[i]; rem[r*2]++; if (ns) rem[r*2+1]++; }
+  const noRem = pct(rem[1], rem[0]), withRem = pct(rem[3], rem[2]);
+  document.getElementById('kTotal').textContent = fmt(idx.length);
+  document.getElementById('kTotalD').textContent = T[L].dTotal(fmt(okN));
+  document.getElementById('kNS').textContent = pct(nsN, idx.length).toFixed(1) + '%';
+  document.getElementById('kNSD').textContent = T[L].dNS(fmt(nsN));
+  document.getElementById('kLost').textContent = money(lost);
+  document.getElementById('kLostD').textContent = t('dLost');
+  document.getElementById('kWait').textContent = idx.length ? (waitSum / idx.length).toFixed(1) : '—';
+  document.getElementById('kWaitD').textContent = t('dWait');
+  document.getElementById('kRem').textContent = '−' + Math.max(0, noRem - withRem).toFixed(0) + ' pts';
+  document.getElementById('kRemD').textContent = T[L].dRem(noRem.toFixed(0) + '%', withRem.toFixed(0) + '%');
+
+  // trend (click a month)
+  const mN = dicts.mes.map(() => [0,0]);
+  for (const i of filtered('mes')) { mN[cols.mes[i]][0]++; if (cols.estado[i] === NS) mN[cols.mes[i]][1]++; }
+  const used = mN.map((m,k)=>[k,m]).filter(([,m])=>m[0]);
+  mk('cTrend').setOption({ grid:{ left:50, right:50, top:30, bottom:30 }, tooltip:{ trigger:'axis' }, legend:{ data:[t('citas'), t('ns')], textStyle:{ color:C.mut }, top:0, right:0 },
+    xAxis:{ type:'category', data:used.map(([k])=>dicts.mes[k].slice(2).replace('-','/')), ...axis },
+    yAxis:[{ type:'value', ...axis }, { type:'value', ...axis, splitLine:{ show:false }, axisLabel:{ ...axis.axisLabel, formatter:'{value}%' }, min:0 }],
+    series:[{ name:t('citas'), type:'bar', data:used.map(([k,m])=>({ value:m[0], mes:k, itemStyle:{ color: S.mes === k ? C.lime : '#2b5672', opacity:dim(S.mes === null || S.mes === k), borderRadius:[4,4,0,0] } })), barWidth:'55%' },
+      { name:t('ns'), type:'line', yAxisIndex:1, smooth:true, symbolSize:7, data:used.map(([,m])=>+pct(m[1],m[0]).toFixed(1)), lineStyle:{ color:C.red, width:3 }, itemStyle:{ color:C.red }, areaStyle:{ color:'rgba(255,107,107,.10)' } }] }, true);
+
+  // heatmap (click a day/hour cell)
+  const H = {};
+  for (const i of filtered('dh')) { const k = cols.dia[i] + '_' + cols.hora[i]; H[k] = H[k] || [0,0]; H[k][0]++; if (cols.estado[i] === NS) H[k][1]++; }
+  const hd = []; let worst = [0,'',''];
+  DIA_ORDER.forEach((d, yi) => { const di = dicts.dia.indexOf(d); HORAS.forEach((h, xi) => { const v = H[di + '_' + h]; const p = v && v[0] >= 15 ? +pct(v[1], v[0]).toFixed(1) : null;
+    const sel = !S.dh || (S.dh[0] === di && S.dh[1] === h);
+    hd.push({ value:[xi, yi, p], di, h, itemStyle:{ opacity:dim(sel), borderColor: S.dh && sel ? '#ffffff' : '#0b1620' } }); if (p && p > worst[0]) worst = [p, T[L].dias[yi], `${h}:00`]; }); });
+  mk('cHeat').setOption({ grid:{ left:50, right:20, top:10, bottom:56 }, tooltip:{ formatter:(p)=>`${T[L].dias[p.value[1]]} ${HORAS[p.value[0]]}:00 · ${p.value[2]}%` },
+    xAxis:{ type:'category', data:HORAS.map((h)=>`${h}h`), ...axis, splitArea:{ show:false } }, yAxis:{ type:'category', data:T[L].dshort, ...axis, inverse:true },
+    visualMap:{ min:12, max:32, calculable:false, orient:'horizontal', left:'center', bottom:0, itemWidth:12, itemHeight:220, textStyle:{ color:C.mut }, inRange:{ color:['#16384a','#2f6b55','#C6F24A','#FFB547','#ff6b6b'] }, formatter:'{value}%' },
+    series:[{ type:'heatmap', data:hd, label:{ show:true, color:'#0b1620', fontWeight:800, fontSize:11, formatter:(p)=>p.value[2]==null?'':Math.round(p.value[2]) }, itemStyle:{ borderColor:'#0b1620', borderWidth:3, borderRadius:6 } }] }, true);
+
+  // specialty (click a bar)
+  const E = dicts.especialidad.map(() => [0,0,0]);
+  for (const i of filtered('esp')) { const e = cols.especialidad[i]; E[e][0]++; if (cols.estado[i] === NS) { E[e][1]++; E[e][2] += cols.valor[i]; } }
+  const es = E.map((v,k)=>[trEsp(dicts.especialidad[k]), v[0] ? +pct(v[1],v[0]).toFixed(1) : 0, v[2], k]).filter((x)=>x[1]).sort((a,b)=>a[1]-b[1]);
+  mk('cEsp').setOption({ grid:{ left:130, right:46, top:6, bottom:20 }, tooltip:{ formatter:(p)=>`${p.name}: ${p.value}% · ${money(es[p.dataIndex][2])}` },
+    xAxis:{ type:'value', ...axis, axisLabel:{ ...axis.axisLabel, formatter:'{value}%' } }, yAxis:{ type:'category', data:es.map((x)=>x[0]), ...axis },
+    series:[{ type:'bar', data:es.map((x)=>({ value:x[1], esp:x[3], itemStyle:{ color: x[1] >= 25 ? C.red : x[1] >= 20 ? C.amber : C.lime, opacity:dim(S.esp === null || S.esp === x[3]), borderRadius:[0,5,5,0] } })), label:{ show:true, position:'right', color:C.txt, fontWeight:700, formatter:'{c}%' }, barWidth:'62%' }] }, true);
+
+  // wait time curve (click a point)
+  const W = B.map(() => [0,0]);
+  for (const i of filtered('wait')) { const b = bucket(cols.dias_espera[i]); W[b][0]++; if (cols.estado[i] === NS) W[b][1]++; }
+  mk('cWait').setOption({ grid:{ left:46, right:20, top:20, bottom:30 }, tooltip:{ trigger:'axis', formatter:(p)=>`${p[0].name} ${t('days')}: ${p[0].value}%` },
+    xAxis:{ type:'category', data:B.map(([a,z])=>z>90?`${a}+`:`${a}-${z}`), ...axis }, yAxis:{ type:'value', ...axis, axisLabel:{ ...axis.axisLabel, formatter:'{value}%' }, min:10 },
+    series:[{ type:'line', smooth:true, data:W.map((w,k)=>({ value:w[0]>=30?+pct(w[1],w[0]).toFixed(1):null, wait:k, symbolSize: S.wait === k ? 18 : 11, itemStyle:{ color: S.wait === k ? C.lime : C.amber } })), lineStyle:{ color:C.amber, width:4 },
+      areaStyle:{ color:new echarts.graphic.LinearGradient(0,0,0,1,[{offset:0,color:'rgba(255,181,71,.35)'},{offset:1,color:'rgba(255,181,71,0)'}]) }, label:{ show:true, position:'top', color:C.txt, fontWeight:700, formatter:'{c}%' } }] }, true);
+
+  // channel (click a slice)
+  const K = dicts.canal.map(() => [0,0]);
+  for (const i of filtered('canal')) { const c = cols.canal[i]; K[c][0]++; if (cols.estado[i] === NS) K[c][1]++; }
+  mk('cCanal').setOption({ tooltip:{ formatter:(p)=>`${p.name}: ${fmt(p.value)} · ${t('ns')} ${p.data.ns}%` },
+    series:[{ type:'pie', radius:['46%','74%'], center:['50%','52%'], itemStyle:{ borderColor:'#112230', borderWidth:4, borderRadius:8 },
+      label:{ color:C.txt, fontWeight:700, formatter:(p)=>`${p.name}\n{n|${t('ns')} ${p.data.ns}%}`, rich:{ n:{ color:C.amber, fontWeight:800, fontSize:12, padding:[4,0,0,0] } } },
+      data:K.map((k,j)=>({ name:trCanal(dicts.canal[j]), value:k[0], ns:+pct(k[1],k[0]).toFixed(0), canal:j, itemStyle:{ color:['#2b7a9e','#C6F24A','#4fd1c5','#FFB547'][j % 4], opacity:dim(S.canal === null || S.canal === j) } })) }] }, true);
+
+  const worstEsp = es[es.length - 1] ? es[es.length - 1][0] : '—';
+  document.getElementById('insight').innerHTML = T[L].ins(worst[1], worst[2], worstEsp, Math.max(0, noRem - withRem).toFixed(0) + ' pts').map((s)=>`<span>${s}</span>`).join('');
+}
+function wireClicks() {
+  mk('cTrend').on('click', (p) => { if (p.seriesType === 'bar') toggle('mes', p.data.mes); });
+  mk('cHeat').on('click', (p) => { if (p.data && p.data.value[2] != null) toggle('dh', [p.data.di, p.data.h]); });
+  mk('cEsp').on('click', (p) => toggle('esp', p.data.esp));
+  mk('cWait').on('click', (p) => toggle('wait', p.data.wait));
+  mk('cCanal').on('click', (p) => toggle('canal', p.data.canal));
+}
+['fSede','fEsp','fPer'].forEach((id) => document.getElementById(id).addEventListener('change', render));
+document.getElementById('lang').addEventListener('click', () => { L = L === 'es' ? 'en' : 'es'; fillFilters(); render(); });
+const q = new URLSearchParams(location.search); if (q.get('lang') === 'en') L = 'en'; if (q.get('S')) Object.assign(S, JSON.parse(q.get('S')));
+fillFilters(); render(); wireClicks();
+window.addEventListener('resize', () => Object.values(charts).forEach((c) => c.resize()));
+</script>
+</body>
+</html>
